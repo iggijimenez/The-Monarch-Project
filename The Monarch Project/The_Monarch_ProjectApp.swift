@@ -6,9 +6,15 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct The_Monarch_ProjectApp: App {
+  
+  init() {
+    FirebaseApp.configure()
+  }
+  
     var body: some Scene {
         WindowGroup {
             ContentView()
