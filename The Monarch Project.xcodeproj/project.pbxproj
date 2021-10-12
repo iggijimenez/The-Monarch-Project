@@ -14,6 +14,8 @@
 		A49E6A4B27160D54002CC79C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A49E6A4A27160D54002CC79C /* GoogleService-Info.plist */; };
 		A49E6A4E27160EE1002CC79C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A49E6A4D27160EE1002CC79C /* FirebaseFirestore */; };
 		A49E6A5027160EE1002CC79C /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = A49E6A4F27160EE1002CC79C /* FirebaseFirestoreSwift-Beta */; };
+		A4D727D027164D6F00BCFA2A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D727CF27164D6F00BCFA2A /* ViewModel.swift */; };
+		A4D727D227164EAB00BCFA2A /* Event_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D727D127164EAB00BCFA2A /* Event_User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		A49E6A4027160BD4002CC79C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A49E6A4327160BD4002CC79C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A49E6A4A27160D54002CC79C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A4D727CF27164D6F00BCFA2A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		A4D727D127164EAB00BCFA2A /* Event_User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event_User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 			children = (
 				A49E6A3C27160BCE002CC79C /* The_Monarch_ProjectApp.swift */,
 				A49E6A3E27160BCE002CC79C /* ContentView.swift */,
+				A4D727D127164EAB00BCFA2A /* Event_User.swift */,
+				A4D727CF27164D6F00BCFA2A /* ViewModel.swift */,
 				A49E6A4A27160D54002CC79C /* GoogleService-Info.plist */,
 				A49E6A4027160BD4002CC79C /* Assets.xcassets */,
 				A49E6A4227160BD4002CC79C /* Preview Content */,
@@ -153,7 +159,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A49E6A3F27160BCE002CC79C /* ContentView.swift in Sources */,
+				A4D727D027164D6F00BCFA2A /* ViewModel.swift in Sources */,
 				A49E6A3D27160BCE002CC79C /* The_Monarch_ProjectApp.swift in Sources */,
+				A4D727D227164EAB00BCFA2A /* Event_User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
