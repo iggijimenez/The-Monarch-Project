@@ -11,6 +11,26 @@ import Firebase
 class ViewModel: ObservableObject {
   
   @Published var list = [Event_User]()
+  var attending = 0
+  
+  func addData(name: String, like: String) {
+    
+    //get a reference to the database
+    let db = Firestore.firestore()
+    
+    //Read the documents at a specific path
+    db.collection("event_users").addDocument(data: ["name" : name, "like": like]) { error in
+      
+      //checking for errors
+      if error == nil {
+        self.getData()
+      } else {
+        
+      }
+    }
+      
+    
+  }
   
   func getData() {
     
@@ -31,6 +51,8 @@ class ViewModel: ObservableObject {
             
             //get all the documents and create event_user
             self.list = snapshot.documents.map { d in
+              self.attending += 1
+              print(self.attending)
               
               //Create a event item for each document returned
               return Event_User(id: d.documentID,
