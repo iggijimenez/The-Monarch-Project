@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A415BB7C271789EF0028D138 /* Homescreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A415BB7B271789EF0028D138 /* Homescreen.swift */; };
+		A415BB7E27178A9F0028D138 /* Mapscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A415BB7D27178A9F0028D138 /* Mapscreen.swift */; };
+		A415BB8227178BEB0028D138 /* Feedscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A415BB8127178BEB0028D138 /* Feedscreen.swift */; };
 		A49E6A3D27160BCE002CC79C /* The_Monarch_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E6A3C27160BCE002CC79C /* The_Monarch_ProjectApp.swift */; };
 		A49E6A3F27160BCE002CC79C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E6A3E27160BCE002CC79C /* ContentView.swift */; };
 		A49E6A4127160BD4002CC79C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A49E6A4027160BD4002CC79C /* Assets.xcassets */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A415BB7B271789EF0028D138 /* Homescreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homescreen.swift; sourceTree = "<group>"; };
+		A415BB7D27178A9F0028D138 /* Mapscreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapscreen.swift; sourceTree = "<group>"; };
+		A415BB8127178BEB0028D138 /* Feedscreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedscreen.swift; sourceTree = "<group>"; };
 		A49E6A3927160BCE002CC79C /* Monarch Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Monarch Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A49E6A3C27160BCE002CC79C /* The_Monarch_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Monarch_ProjectApp.swift; sourceTree = "<group>"; };
 		A49E6A3E27160BCE002CC79C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,6 +90,9 @@
 			isa = PBXGroup;
 			children = (
 				A49E6A3E27160BCE002CC79C /* ContentView.swift */,
+				A415BB8127178BEB0028D138 /* Feedscreen.swift */,
+				A415BB7B271789EF0028D138 /* Homescreen.swift */,
+				A415BB7D27178A9F0028D138 /* Mapscreen.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,10 +191,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A415BB8227178BEB0028D138 /* Feedscreen.swift in Sources */,
+				A415BB7E27178A9F0028D138 /* Mapscreen.swift in Sources */,
 				A49E6A3F27160BCE002CC79C /* ContentView.swift in Sources */,
 				A4D727D027164D6F00BCFA2A /* ViewModel.swift in Sources */,
 				A49E6A3D27160BCE002CC79C /* The_Monarch_ProjectApp.swift in Sources */,
 				A4D727D227164EAB00BCFA2A /* Event_User.swift in Sources */,
+				A415BB7C271789EF0028D138 /* Homescreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
