@@ -22,6 +22,8 @@
 		A49E6A5027160EE1002CC79C /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = A49E6A4F27160EE1002CC79C /* FirebaseFirestoreSwift-Beta */; };
 		A4D727D027164D6F00BCFA2A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D727CF27164D6F00BCFA2A /* ViewModel.swift */; };
 		A4D727D227164EAB00BCFA2A /* Event_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D727D127164EAB00BCFA2A /* Event_User.swift */; };
+		A4E15DFA2717D00200BBE7F7 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E15DF92717D00200BBE7F7 /* EventModel.swift */; };
+		A4E15DFD2717D0D700BBE7F7 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E15DFC2717D0D700BBE7F7 /* PostData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		A49E6A4A27160D54002CC79C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A4D727CF27164D6F00BCFA2A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		A4D727D127164EAB00BCFA2A /* Event_User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event_User.swift; sourceTree = "<group>"; };
+		A4E15DF92717D00200BBE7F7 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		A4E15DFC2717D0D700BBE7F7 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 				A4D727D32716550A00BCFA2A /* View */,
 				A4D727D52716553200BCFA2A /* Model */,
 				A4D727D42716551C00BCFA2A /* ViewModel */,
+				A4E15DFB2717D0C100BBE7F7 /* Data */,
 				A49E6A4A27160D54002CC79C /* GoogleService-Info.plist */,
 				A49E6A4027160BD4002CC79C /* Assets.xcassets */,
 				A49E6A4227160BD4002CC79C /* Preview Content */,
@@ -116,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				A4D727CF27164D6F00BCFA2A /* ViewModel.swift */,
-				A415BB85271795E80028D138 /* EventData.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -126,8 +130,18 @@
 			children = (
 				A4D727D127164EAB00BCFA2A /* Event_User.swift */,
 				A415BB83271794AB0028D138 /* Event.swift */,
+				A4E15DF92717D00200BBE7F7 /* EventModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A4E15DFB2717D0C100BBE7F7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A415BB85271795E80028D138 /* EventData.swift */,
+				A4E15DFC2717D0D700BBE7F7 /* PostData.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A415BB84271794AC0028D138 /* Event.swift in Sources */,
+				A4E15DFD2717D0D700BBE7F7 /* PostData.swift in Sources */,
 				A415BB8227178BEB0028D138 /* Feedscreen.swift in Sources */,
 				A415BB86271795E90028D138 /* EventData.swift in Sources */,
 				A415BB8B27179B290028D138 /* EventPostView.swift in Sources */,
@@ -218,6 +233,7 @@
 				A49E6A3D27160BCE002CC79C /* The_Monarch_ProjectApp.swift in Sources */,
 				A4D727D227164EAB00BCFA2A /* Event_User.swift in Sources */,
 				A415BB7C271789EF0028D138 /* Homescreen.swift in Sources */,
+				A4E15DFA2717D00200BBE7F7 /* EventModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

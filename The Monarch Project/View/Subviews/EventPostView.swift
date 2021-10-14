@@ -10,18 +10,57 @@ import Firebase
 
 struct EventPostView: View {
   
-  @ObservedObject var event = EventData()
+  var event: EventModel
+  @ObservedObject var model = ViewModel()
   
-    var body: some View {
-      Image("dreamer_mural")
+  //MARK: BODY
+  var body: some View {
+    
+    ZStack {
+      Image(event.image)
         .resizable()
-        .scaledToFit()
-        .frame(width: 300, height: 230)
+        .aspectRatio(contentMode: .fill)
+        .frame(width: 400, height: 300)
+        .clipped()
+        .overlay(
+          Rectangle()
+            .foregroundColor(.black)
+            .opacity(0.4))
+      
+      VStack{
+        Text(event.title)
+          .fontWeight(.heavy)
+          .font(.title)
+          .foregroundColor(.white)
+        
+        Button(action: {
+          model.getData()
+        }) {
+          HStack(spacing: 8) {
+            Text("refresh")
+            Image(systemName: "restart.circle")
+              .imageScale(.large)
+          }
+          .foregroundColor(.blue)
+        }//: BUTTON
+      }
     }
+    Spacer()
+  }
 }
 
+
+
+//MARK: PREVIEW
 struct EventPostView_Previews: PreviewProvider {
-    static var previews: some View {
-        EventPostView()
+  
+  static var event1 = EventModel(title: "String", image: "String", description: "String")
+  
+  static var previews: some View {
+    Group {
+      EventPostView(event: event1)
     }
+    .previewLayout(.sizeThatFits)
+  }
 }
+

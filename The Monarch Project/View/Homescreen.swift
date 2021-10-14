@@ -10,6 +10,8 @@ import SwiftUI
 struct Homescreen: View {
   
   @ObservedObject var model = ViewModel()
+  var event: [EventModel] = events
+
   
   @State var name = ""
   @State var like = ""
@@ -18,33 +20,40 @@ struct Homescreen: View {
     
     NavigationView {
       
-      VStack {
-        
-        List (model.list) { item in
-          Text(item.name)
-        }
-        
-        //      Text(model.attending)
-        
-        Button(action: {
-          model.addData(name: name, like: like)
-          name = ""
-          like = ""
-        }) {
-          HStack(spacing: 8) {
-            Text("refresh")
-            Image(systemName: "restart.circle")
-              .imageScale(.large)
-          }
-          .padding(.horizontal, 16)
-          .padding(.vertical, 10)
-          .background(
-            Capsule().strokeBorder(Color.black, lineWidth: 1.25))
-        }//: BUTTON
-        .accentColor(Color.black)
-        .padding()
-        
-      }
+            VStack {
+              
+              List {
+                ForEach(events) { event in
+                  EventPostView(event: event)
+                }
+                .listRowInsets(EdgeInsets())
+              }
+      
+//              List (model.list) { item in
+//                Text(item.name)
+//              }
+//
+//              //      Text(model.attending)
+//
+//              Button(action: {
+//                model.addData(name: name, like: like)
+//                name = ""
+//                like = ""
+//              }) {
+//                HStack(spacing: 8) {
+//                  Text("refresh")
+//                  Image(systemName: "restart.circle")
+//                    .imageScale(.large)
+//                }
+//                .padding(.horizontal, 16)
+//                .padding(.vertical, 10)
+//                .background(
+//                  Capsule().strokeBorder(Color.black, lineWidth: 1.25))
+//              }//: BUTTON
+//              .accentColor(Color.black)
+//              .padding()
+//
+            }
       .navigationTitle("Home")
     }
     
