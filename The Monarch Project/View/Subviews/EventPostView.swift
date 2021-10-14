@@ -15,13 +15,11 @@ struct EventPostView: View {
   
   //MARK: BODY
   var body: some View {
-    
     ZStack {
       Image(event.image)
         .resizable()
-        .aspectRatio(contentMode: .fill)
-        .frame(width: 400, height: 300)
-        .clipped()
+        .scaledToFit()
+        .cornerRadius(4)
         .overlay(
           Rectangle()
             .foregroundColor(.black)
@@ -32,6 +30,8 @@ struct EventPostView: View {
           .fontWeight(.heavy)
           .font(.title)
           .foregroundColor(.white)
+          .lineLimit(1)
+          .minimumScaleFactor(0.7)
         
         Button(action: {
           model.getData()
@@ -43,9 +43,11 @@ struct EventPostView: View {
           }
           .foregroundColor(.blue)
         }//: BUTTON
+        
       }
+      
     }
-    Spacer()
+    .padding(.vertical, 20)
   }
 }
 
