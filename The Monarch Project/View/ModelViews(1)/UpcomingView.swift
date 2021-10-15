@@ -30,6 +30,7 @@ struct UpcomingView: View {
         Text("Current Event")
           .fontWeight(.semibold)
           .font(.title)
+          .foregroundColor(.white)
         
       }
       ZStack(){
@@ -55,7 +56,15 @@ struct UpcomingView: View {
 
 struct EventDetailViewTest: View {
   
+  @StateObject var model = ViewModel()
+  
   @Binding var Variable2: Bool
+  
+  @State var buttonTitle: String = "JOIN"
+  @State private var didTap:Bool = false
+  
+  var name = ""
+  var like = ""
   
   var body: some View {
     VStack {
@@ -75,36 +84,45 @@ struct EventDetailViewTest: View {
             .frame(height: 280)
             .cornerRadius(25)
         }
-    }
-    
-    Text("Upcoming Event")
-      .font(.title2)
-      .fontWeight(.semibold)
-      .lineLimit(1)
-      .multilineTextAlignment(.center)
-      .padding(.horizontal)
-    
-    Text("This event we need helpers and we are alsing you all to come help us in this journey")
-      .multilineTextAlignment(.center)
-      .padding(.horizontal)
-    Spacer()
-    
-    Text("0 are attending")
-      .font(.title)
-      .fontWeight(.black)
-    ZStack {
-      Rectangle()
-        .frame(width: 100, height: 50)
-        .foregroundColor(.green)
-        .cornerRadius(20)
-      Text("JOIN")
-        .foregroundColor(.white)
+      }
+      
+      Text("Upcoming Event")
         .font(.title2)
-        .fontWeight(.heavy)
-    }
-    
-    
-    Spacer()
+        .fontWeight(.semibold)
+        .lineLimit(1)
+        .multilineTextAlignment(.center)
+        .padding(.horizontal)
+      
+      Text("This event we need helpers and we are alsing you all to come help us in this journey")
+        .multilineTextAlignment(.center)
+        .padding(.horizontal)
+      Spacer()
+      
+      Text("0 are attending")
+        .font(.title)
+        .fontWeight(.black)
+      ZStack {
+        Button(action: {
+          self.didTap = true
+//          model.addData(name: name, like: like)
+            buttonTitle = "JOINED!"
+        }) {
+          HStack(spacing: 8) {
+            Text(buttonTitle)
+            Image(systemName: "person.crop.circle.fill.badge.plus")
+              .imageScale(.large)
+          }
+          .padding(.horizontal, 16)
+          .padding(.vertical, 10)
+          .background(didTap ? Color.green : Color.blue)
+          .cornerRadius(15)
+        }//: BUTTON
+        .accentColor(Color.black)
+        .padding()
+      }
+      
+      
+      Spacer()
     }
   }
 }
