@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EventDetailView: View {
   
-  var event: EventModel
+  var event: EventModelCoded
   @ObservedObject var model = ViewModel()
   
   var body: some View {
@@ -39,7 +39,7 @@ struct EventDetailView: View {
 }
 
 struct EventDetailView_Previews: PreviewProvider {
-  static var event1 = EventModel(title: "String", image: "String", description: "String")
+  static var event1 = EventModelCoded(title: "String", image: "String", description: "String")
   
   static var previews: some View {
     Group {

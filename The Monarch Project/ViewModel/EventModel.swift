@@ -8,9 +8,9 @@
 import Foundation
 import Firebase
 
-class EventData: ObservableObject {
+class EventModel: ObservableObject {
   
-  @Published var list = [Event]()
+  @Published var list = [EventDataModel]()
   
   func addData(desciption: String, image: String, name: String) {
     
@@ -53,10 +53,10 @@ class EventData: ObservableObject {
               print(self.list)
               
               //Create a event item for each document returned
-              return Event(id: d.documentID,
-                           description: d["description"] as? String ?? "",
-                           image: d["image"] as? String ?? "",
-                           name: d["name"] as? String ?? "") //cant find the value
+              return EventDataModel(id: d.documentID,
+                                    name: d["description"] as? String ?? "",
+                                    image: d["image"] as? String ?? "",
+                                    description: d["name"] as? String ?? "") //cant find the value
             }
             
           }

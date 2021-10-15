@@ -10,8 +10,9 @@ import Firebase
 
 struct EventPostView: View {
   
-  var event: EventModel
+  var event: EventModelCoded
   @ObservedObject var model = ViewModel()
+//  @ObservedObject var data = EventDataModel()
   
   //MARK: BODY
   var body: some View {
@@ -48,7 +49,7 @@ struct EventPostView: View {
 //MARK: PREVIEW
 struct EventPostView_Previews: PreviewProvider {
   
-  static var event1 = EventModel(title: "String", image: "String", description: "String")
+  static var event1 = EventModelCoded(title: "String", image: "String", description: "String")
   
   static var previews: some View {
     Group {

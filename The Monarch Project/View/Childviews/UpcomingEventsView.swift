@@ -11,24 +11,55 @@ struct UpcomingEventsView: View {
   
   var body: some View {
     VStack {
-      Image("dreamer_mural") //event.image
-        .resizable()
-        .scaledToFit()
-        .frame(height: 250)
-        .cornerRadius(25)
       
-      Text("event.title")
+      HStack {
+          VStack(alignment: .leading) {
+              Text("Top Text")
+
+            Image("dreamer_mural") //event.image
+              .resizable()
+              .scaledToFit()
+              .frame(height: 280)
+              .cornerRadius(25)
+          }
+      }
+      
+      Text("Upcoming Event")
         .font(.title2)
         .fontWeight(.semibold)
         .lineLimit(1)
         .multilineTextAlignment(.center)
         .padding(.horizontal)
       
-      Text("event.description")
+      Text("This event we need helpers and we are alsing you all to come help us in this journey")
         .multilineTextAlignment(.center)
         .padding(.horizontal)
+      Spacer()
+      
+      Text("0 are attending")
+        .font(.title)
+        .fontWeight(.black)
+      ZStack {
+        Rectangle()
+          .frame(width: 100, height: 50)
+          .foregroundColor(.green)
+          .cornerRadius(20)
+        Text("JOIN")
+          .foregroundColor(.white)
+          .font(.title2)
+          .fontWeight(.heavy)
+      }
+      
       
       Spacer()
     }
   }
+}
+
+struct UpcomingEventView_Previews: PreviewProvider {
+  
+  static var previews: some View {
+    UpcomingEventsView()
+  }
+  
 }
