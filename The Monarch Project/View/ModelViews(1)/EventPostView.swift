@@ -32,7 +32,10 @@ struct EventPostView: View {
           .foregroundColor(.white)
           .lineLimit(1)
           .minimumScaleFactor(0.7)
-        
+        Text("click me to learn more")
+          .fontWeight(.light)
+          .font(.subheadline)
+          .foregroundColor(.white)
       }
       
     }

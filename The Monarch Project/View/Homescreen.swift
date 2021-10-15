@@ -19,10 +19,9 @@ struct Homescreen: View {
     NavigationView {
       
       VStack {
-//        Text(model.attending)
-        List {
+        ScrollView{
+          UpcomingView()
           ForEach(events) { event in
-            
             NavigationLink(
               destination: EventDetailView(event: event), label: {
                 EventPostView(event: event)
