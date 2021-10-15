@@ -27,9 +27,11 @@ struct EventDetailView: View {
         .multilineTextAlignment(.center)
         .padding(.horizontal)
       
-      Text(event.description)
-        .multilineTextAlignment(.center)
-        .padding(.horizontal)
+      ScrollView{
+        Text(event.description)
+          .multilineTextAlignment(.center)
+          .padding(.horizontal)
+      }
       
       Spacer()
     }

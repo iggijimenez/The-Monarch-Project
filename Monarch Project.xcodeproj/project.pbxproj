@@ -71,8 +71,8 @@
 		A415BB8927179B000028D138 /* ModelViews(1) */ = {
 			isa = PBXGroup;
 			children = (
-				A415BB8A27179B290028D138 /* EventPostView.swift */,
 				A42ED276271912C8008D365B /* UpcomingView.swift */,
+				A415BB8A27179B290028D138 /* EventPostView.swift */,
 				A42ED278271919B6008D365B /* EventBanner.swift */,
 			);
 			path = "ModelViews(1)";

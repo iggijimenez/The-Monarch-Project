@@ -16,7 +16,7 @@ struct Place: Identifiable {
 
 struct Mapscreen: View {
   
-  @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 38.43089, longitude: -122.723123), latitudinalMeters: 30000, longitudinalMeters: 30000)
+  @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 38.362745, longitude: -122.688706), latitudinalMeters: 30000, longitudinalMeters: 30000)
   
   var body: some View {
     

@@ -10,13 +10,15 @@ import Firebase
 
 struct UpcomingView: View {
   
+  
   //MARK: BODY
   var body: some View {
-    ZStack{
-//      HStack(alignment: .topLeading) {
-//        Text("hi")
-//      }
-      Image("event.image")
+    
+    
+    ZStack(alignment: .topLeading) {
+      
+      ZStack{
+      Image("dreamer_mural")
         .resizable()
         .scaledToFit()
         .cornerRadius(4)
@@ -24,20 +26,28 @@ struct UpcomingView: View {
           Rectangle()
             .foregroundColor(.black)
             .opacity(0.4))
+        Text("Current Event")
+          .fontWeight(.semibold)
+          .font(.title)
       
-        
-        VStack{
-          Text("event.title")
-            .fontWeight(.heavy)
-            .font(.title)
-            .foregroundColor(.white)
-            .lineLimit(1)
-            .minimumScaleFactor(0.7)
-          
-        }
-        
       }
-      .padding(.vertical, 20)
+      ZStack(){
+        Rectangle()
+          .frame(width: 230, height: 50)
+          .foregroundColor(Color.orange)
+          .cornerRadius(10)
+        Text("Upcoming Events")
+          .padding(1)
+          .foregroundColor(Color.black)
+          .font(.headline)
+      } //
+    } //ZStack with alignment
   }
-  
+}
+
+struct UpcomingView_Previews: PreviewProvider {
+  static var previews: some View {
+    UpcomingView()
+      .previewLayout(.sizeThatFits)
+  }
 }
