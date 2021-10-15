@@ -10,7 +10,8 @@ import Firebase
 
 class EventModel: ObservableObject {
   
-  @Published var list = [EventDataModel]()
+  @Published var pastEvents = [Event]()
+  @Published var upcomingEvents = [Event]()
   
   func addData(desciption: String, image: String, name: String) {
     
@@ -49,15 +50,17 @@ class EventModel: ObservableObject {
           DispatchQueue.main.async {
             
             //get all the documents and create event_user
-            self.list = snapshot.documents.map { d in
-              print(self.list)
+            self.pastEvents = snapshot.documents.map { d in
+              print(self.pastEvents)
               
               //Create a event item for each document returned
-              return EventDataModel(id: d.documentID,
-                                    name: d["description"] as? String ?? "",
+              return Event(id: d.documentID,
+                                    name: d["name"] as? String ?? "",
                                     image: d["image"] as? String ?? "",
-                                    description: d["name"] as? String ?? "") //cant find the value
+                                    description: d["description"] as? String ?? "")
             }
+            
+            
             
           }
           
@@ -67,6 +70,40 @@ class EventModel: ObservableObject {
         
       }
     }
+    
+    db.collection("upcoming_event").getDocuments { snapshot, error in
+      
+      //checking for errors
+      if error == nil {
+        
+        //no errors
+        if let snapshot = snapshot {
+          
+          //update the list propert in hte main thred
+          DispatchQueue.main.async {
+            
+            //get all the documents and create event_user
+            self.upcomingEvents = snapshot.documents.map { d in
+              print(self.upcomingEvents)
+              
+              //Create a event item for each document returned
+              return Event(id: d.documentID,
+                                    name: d["name"] as? String ?? "",
+                                    image: d["image"] as? String ?? "",
+                                    description: d["description"] as? String ?? "")
+            }
+            
+            
+            
+          }
+          
+        }
+      } else {
+        //Handle the error
+        
+      }
+    }
+    
   }
   
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Homescreen: View {
   
-  @StateObject var model = ViewModel()
+  @StateObject var model = EventModel()
   
   @State var name = ""
   @State var like = ""
@@ -20,8 +20,14 @@ struct Homescreen: View {
       
       VStack {
         ScrollView{
-          UpcomingView()
-          ForEach(events) { event in
+          ForEach(model.upcomingEvents) { event in
+            NavigationLink(
+              destination: UpcomingEventView(event: event), label: {
+                UpcomingView(event: event)
+              }
+            )
+          }
+          ForEach(model.pastEvents) { event in
             NavigationLink(
               destination: EventDetailView(event: event), label: {
                 EventPostView(event: event)
@@ -31,39 +37,12 @@ struct Homescreen: View {
           .listRowInsets(EdgeInsets())
         }
         
-//                      List (model.list) { item in
-//                        Text(item.name)
-//                        Text(ViewModel.attending)
-//                      }
-//
-//                      //      Text(model.attending)
-//
-//                      Button(action: {
-//                        model.addData(name: name, like: like)
-//                        name = ""
-//                        like = ""
-//                      }) {
-//                        HStack(spacing: 8) {
-//                          Text("refresh")
-//                          Image(systemName: "restart.circle")
-//                            .imageScale(.large)
-//                        }
-//                        .padding(.horizontal, 16)
-//                        .padding(.vertical, 10)
-//                        .background(
-//                          Capsule().strokeBorder(Color.black, lineWidth: 1.25))
-//                      }//: BUTTON
-//                      .accentColor(Color.black)
-//                      .padding()
-//
       }
       .navigationTitle("Home")
     }
-    
-  }
-  
-  init() {
-    model.getData()
+    .onAppear {
+      model.getData()
+    }
   }
   
 }

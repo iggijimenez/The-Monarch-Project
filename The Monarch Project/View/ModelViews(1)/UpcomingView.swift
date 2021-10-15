@@ -10,8 +10,8 @@ import Firebase
 
 struct UpcomingView: View {
   
+  var event: Event
   @State var variable1 = false
-  @StateObject var model = ViewModel()
   
   //MARK: BODY
   var body: some View {
@@ -28,7 +28,7 @@ struct UpcomingView: View {
             Rectangle()
               .foregroundColor(.black)
               .opacity(0.4))
-        Text("Current Event")
+        Text(event.name)
           .fontWeight(.semibold)
           .font(.title)
           .foregroundColor(.white)
@@ -45,96 +45,20 @@ struct UpcomingView: View {
           .font(.headline)
       } //
     } //ZStack with alignment
-    .onTapGesture {
-      self.variable1.toggle()
-    }
-    .fullScreenCover(isPresented: $variable1) {
-      EventDetailViewTest(Variable2: self.$variable1)
-    }
+//    .onTapGesture {
+//      self.variable1.toggle()
+//    }
+//    .fullScreenCover(isPresented: $variable1) {
+//      EventDetailViewTest(Variable2: self.$variable1)
+//    }
     
   }
 }
 
-struct EventDetailViewTest: View {
-  
-  @StateObject var model = ViewModel()
-  
-  @Binding var Variable2: Bool
-  
-  @State var buttonTitle: String = "JOIN"
-  @State private var didTap:Bool = false
-  
-  var name = ""
-  var like = ""
-  var attending = 0
-  
-  var body: some View {
-    VStack {
-      
-      HStack {
-        VStack(alignment: .leading) {
-          Text("< Back")
-            .foregroundColor(.red)
-            .padding()
-            .onTapGesture {
-              self.Variable2.toggle()
-            }
-          
-          Image("dreamer_mural") //event.image
-            .resizable()
-            .scaledToFit()
-            .frame(height: 280)
-            .cornerRadius(25)
-        }
-      }
-      
-      Text("Upcoming Event")
-        .font(.title2)
-        .fontWeight(.semibold)
-        .lineLimit(1)
-        .multilineTextAlignment(.center)
-        .padding(.horizontal)
-      
-      Text("This event we need helpers and we are alsing you all to come help us in this journey")
-        .multilineTextAlignment(.center)
-        .padding(.horizontal)
-      Spacer()
-      
-      Text("\(model.attending) are attending")
-        .font(.title)
-        .fontWeight(.black)
-      ZStack {
-        Button(action: {
-          self.didTap = true
-          model.addData(name: name, like: like)
-          buttonTitle = "JOINED!"
-        }) {
-          HStack(spacing: 8) {
-            Text(buttonTitle)
-            Image(systemName: "person.crop.circle.fill.badge.plus")
-              .imageScale(.large)
-          }
-          .padding(.horizontal, 16)
-          .padding(.vertical, 10)
-          .background(didTap ? Color.green : Color.blue)
-          .cornerRadius(15)
-        }//: BUTTON
-        .accentColor(Color.black)
-        .padding()
-      }
-      
-      
-      Spacer()
-    }
-    .onAppear {
-      model.getData()
-    }
-  }
-}
 
-struct UpcomingView_Previews: PreviewProvider {
-  static var previews: some View {
-    UpcomingView()
-      .previewLayout(.sizeThatFits)
-  }
-}
+//struct UpcomingView_Previews: PreviewProvider {
+//  static var previews: some View {
+//    UpcomingView()
+//      .previewLayout(.sizeThatFits)
+//  }
+//}

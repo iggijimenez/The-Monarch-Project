@@ -11,7 +11,7 @@ import SwiftUI
 struct Event: Identifiable {
   
   var id: String
-  var description: String
-  var image: String
   var name: String
+  var image: String
+  var description: String
 }

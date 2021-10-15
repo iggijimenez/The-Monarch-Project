@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
   
-  @ObservedObject var model = ViewModel()
-  
   var body: some View {
     TabView {
       Homescreen()
@@ -30,10 +28,6 @@ struct ContentView: View {
         }
     }
     .accentColor(.red)
-  }
-  
-  init() {
-    model.getData()
   }
   
 }

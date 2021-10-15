@@ -10,8 +10,7 @@ import Firebase
 
 struct EventPostView: View {
   
-  var event: EventModelCoded
-  @ObservedObject var model = ViewModel()
+  var event: Event
 //  @ObservedObject var data = EventDataModel()
   
   //MARK: BODY
@@ -27,7 +26,7 @@ struct EventPostView: View {
             .opacity(0.4))
       
       VStack{
-        Text(event.title)
+        Text(event.name)
           .fontWeight(.heavy)
           .font(.title)
           .foregroundColor(.white)
@@ -49,7 +48,7 @@ struct EventPostView: View {
 //MARK: PREVIEW
 struct EventPostView_Previews: PreviewProvider {
   
-  static var event1 = EventModelCoded(title: "String", image: "String", description: "String")
+  static var event1 = Event(id: "", name: "String", image: "String", description: "String")
   
   static var previews: some View {
     Group {

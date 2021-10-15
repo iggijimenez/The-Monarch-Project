@@ -9,8 +9,7 @@ import SwiftUI
 
 struct EventDetailView: View {
   
-  var event: EventModelCoded
-  @ObservedObject var model = ViewModel()
+  var event: Event
   
   var body: some View {
     VStack {
@@ -20,7 +19,7 @@ struct EventDetailView: View {
         .frame(height: 250)
         .cornerRadius(25)
       
-      Text(event.title)
+      Text(event.name)
         .font(.title2)
         .fontWeight(.semibold)
         .lineLimit(1)
@@ -39,7 +38,7 @@ struct EventDetailView: View {
 }
 
 struct EventDetailView_Previews: PreviewProvider {
-  static var event1 = EventModelCoded(title: "String", image: "String", description: "String")
+  static var event1 = Event(id: "", name: "String", image: "String", description: "String")
   
   static var previews: some View {
     Group {
