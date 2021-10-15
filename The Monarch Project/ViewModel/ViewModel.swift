@@ -11,8 +11,8 @@ import Firebase
 class ViewModel: ObservableObject {
   
   @Published var list = [Event_User]()
-  var attending = 0
-  
+  @Published var attending: Int = 0
+    
   func addData(name: String, like: String) {
     
     //get a reference to the database

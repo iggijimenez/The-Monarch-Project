@@ -1,14 +1,14 @@
 //
-//  EventPostView.swift
+//  UpcomingEventsView.swift
 //  Monarch Project
 //
-//  Created by Jimenez on 10/13/21.
+//  Created by Jimenez on 10/14/21.
 //
 
 import SwiftUI
 import Firebase
 
-struct EventPostView: View {
+struct UpcomingView: View {
   
   var event: EventModel
   @ObservedObject var model = ViewModel()
@@ -37,21 +37,15 @@ struct EventPostView: View {
       
     }
     .padding(.vertical, 20)
-  }
-}
+  }}
 
-
-
-//MARK: PREVIEW
-struct EventPostView_Previews: PreviewProvider {
-  
+struct UpcomingView_Previews: PreviewProvider {
   static var event1 = EventModel(title: "String", image: "String", description: "String")
   
   static var previews: some View {
     Group {
-      EventPostView(event: event1)
+      UpcomingEventsView(event: event1)
     }
     .previewLayout(.sizeThatFits)
   }
 }
-

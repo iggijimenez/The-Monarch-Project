@@ -50,6 +50,7 @@ class EventData: ObservableObject {
             
             //get all the documents and create event_user
             self.list = snapshot.documents.map { d in
+              print(self.list)
               
               //Create a event item for each document returned
               return Event(id: d.documentID,

@@ -13,6 +13,9 @@
 		A415BB84271794AC0028D138 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A415BB83271794AB0028D138 /* Event.swift */; };
 		A415BB86271795E90028D138 /* EventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A415BB85271795E80028D138 /* EventData.swift */; };
 		A415BB8B27179B290028D138 /* EventPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A415BB8A27179B290028D138 /* EventPostView.swift */; };
+		A42ED27327190845008D365B /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42ED27227190845008D365B /* Test.swift */; };
+		A42ED2752719127E008D365B /* UpcomingEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42ED2742719127D008D365B /* UpcomingEventsView.swift */; };
+		A42ED277271912C8008D365B /* UpcomingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42ED276271912C8008D365B /* UpcomingView.swift */; };
 		A49E6A3D27160BCE002CC79C /* The_Monarch_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E6A3C27160BCE002CC79C /* The_Monarch_ProjectApp.swift */; };
 		A49E6A3F27160BCE002CC79C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E6A3E27160BCE002CC79C /* ContentView.swift */; };
 		A49E6A4127160BD4002CC79C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A49E6A4027160BD4002CC79C /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 		A415BB83271794AB0028D138 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		A415BB85271795E80028D138 /* EventData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventData.swift; sourceTree = "<group>"; };
 		A415BB8A27179B290028D138 /* EventPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPostView.swift; sourceTree = "<group>"; };
+		A42ED27227190845008D365B /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		A42ED2742719127D008D365B /* UpcomingEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingEventsView.swift; sourceTree = "<group>"; };
+		A42ED276271912C8008D365B /* UpcomingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingView.swift; sourceTree = "<group>"; };
 		A49E6A3927160BCE002CC79C /* Monarch Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Monarch Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A49E6A3C27160BCE002CC79C /* The_Monarch_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Monarch_ProjectApp.swift; sourceTree = "<group>"; };
 		A49E6A3E27160BCE002CC79C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				A415BB8A27179B290028D138 /* EventPostView.swift */,
+				A42ED276271912C8008D365B /* UpcomingView.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -111,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				A4C6E1232718B4480096344E /* EventDetailView.swift */,
+				A42ED2742719127D008D365B /* UpcomingEventsView.swift */,
 			);
 			path = Childviews;
 			sourceTree = "<group>";
@@ -142,6 +150,7 @@
 				A4D727D127164EAB00BCFA2A /* Event_User.swift */,
 				A415BB83271794AB0028D138 /* Event.swift */,
 				A4E15DF92717D00200BBE7F7 /* EventModel.swift */,
+				A42ED27227190845008D365B /* Test.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -236,6 +245,9 @@
 				A415BB84271794AC0028D138 /* Event.swift in Sources */,
 				A4C6E1242718B4480096344E /* EventDetailView.swift in Sources */,
 				A4E15DFD2717D0D700BBE7F7 /* PostData.swift in Sources */,
+				A42ED27327190845008D365B /* Test.swift in Sources */,
+				A42ED2752719127E008D365B /* UpcomingEventsView.swift in Sources */,
+				A42ED277271912C8008D365B /* UpcomingView.swift in Sources */,
 				A415BB8227178BEB0028D138 /* Feedscreen.swift in Sources */,
 				A415BB86271795E90028D138 /* EventData.swift in Sources */,
 				A415BB8B27179B290028D138 /* EventPostView.swift in Sources */,
