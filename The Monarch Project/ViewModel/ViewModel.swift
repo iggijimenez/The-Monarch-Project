@@ -51,15 +51,13 @@ class ViewModel: ObservableObject {
             
             //get all the documents and create event_user
             self.list = snapshot.documents.map { d in
-              self.attending += 1
-              print(self.attending)
               
               //Create a event item for each document returned
               return Event_User(id: d.documentID,
                                 name: d["name"] as? String ?? "", //cant find the value
                                 like: d["like"] as? String ?? "") //cant find the value
             }
-            
+            self.attending = snapshot.documents.count
           }
           
         }

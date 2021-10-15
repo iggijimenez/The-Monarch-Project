@@ -13,16 +13,3 @@ let events: [EventModelCoded] = [
   EventModelCoded(title: "Nurture Mural", image: "nurture_mural", description: "This piece is all about the importance and beauty of safe spaces in which we can grow, transform, and become the strongest and best versions of ourselves. There are layers of other meanings and symbols hidden in this piece, we encourage you find and create them for yourselves!")
 ]
 
-//Button(action: {
-//  model.getData()
-//}) {
-//  HStack(spacing: 20) {
-//    Text("refresh")
-//      .bold()
-//      .font(.title2)
-//      .frame(width: 280, height: 50)
-//      .background(Color(.systemBlue))
-//      .foregroundColor(.white)
-//      .cornerRadius(10)
-//  }
-//}//: BUTTON

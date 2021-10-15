@@ -11,6 +11,7 @@ import Firebase
 struct UpcomingView: View {
   
   @State var variable1 = false
+  @StateObject var model = ViewModel()
   
   //MARK: BODY
   var body: some View {
@@ -65,6 +66,7 @@ struct EventDetailViewTest: View {
   
   var name = ""
   var like = ""
+  var attending = 0
   
   var body: some View {
     VStack {
@@ -98,14 +100,14 @@ struct EventDetailViewTest: View {
         .padding(.horizontal)
       Spacer()
       
-      Text("0 are attending")
+      Text("\(model.attending) are attending")
         .font(.title)
         .fontWeight(.black)
       ZStack {
         Button(action: {
           self.didTap = true
-//          model.addData(name: name, like: like)
-            buttonTitle = "JOINED!"
+          model.addData(name: name, like: like)
+          buttonTitle = "JOINED!"
         }) {
           HStack(spacing: 8) {
             Text(buttonTitle)
@@ -123,6 +125,9 @@ struct EventDetailViewTest: View {
       
       
       Spacer()
+    }
+    .onAppear {
+      model.getData()
     }
   }
 }
