@@ -26,8 +26,6 @@ struct Mapscreen: View {
         place in
         MapAnnotation(coordinate: place.coordinate) {
           HStack {
-//            Image(systemName: "heart.fill")
-//              .foregroundColor(.red)
             Text("🦋")
               .fixedSize()
               .foregroundColor(.blue)
@@ -43,10 +41,8 @@ struct Mapscreen: View {
               , alignment: .bottom)
         }
       }
-      
       .navigationBarTitle("Map", displayMode: .inline)
     }
-    
   }
   
   let annotations = [

@@ -43,22 +43,7 @@ struct UpcomingView: View {
           .padding(1)
           .foregroundColor(Color.black)
           .font(.headline)
-      } //
-    } //ZStack with alignment
-//    .onTapGesture {
-//      self.variable1.toggle()
-//    }
-//    .fullScreenCover(isPresented: $variable1) {
-//      EventDetailViewTest(Variable2: self.$variable1)
-//    }
-    
+      }
+    }
   }
 }
-
-
-//struct UpcomingView_Previews: PreviewProvider {
-//  static var previews: some View {
-//    UpcomingView()
-//      .previewLayout(.sizeThatFits)
-//  }
-//}

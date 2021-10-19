@@ -11,7 +11,6 @@ import Firebase
 struct EventPostView: View {
   
   var event: Event
-//  @ObservedObject var data = EventDataModel()
   
   //MARK: BODY
   var body: some View {

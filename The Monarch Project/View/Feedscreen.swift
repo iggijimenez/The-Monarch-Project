@@ -14,7 +14,6 @@ struct Feedscreen: View {
       Text("This is the feed")
         .navigationBarTitle("Feed")
     }
-    
   }
 }
 
