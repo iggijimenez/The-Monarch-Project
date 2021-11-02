@@ -49,7 +49,7 @@
 
 I worked together with ‘The Monarch Project’ a non-profit, to create an interactive app for their community. We wanted to create an app where it is minimalistic yet highlighting the best features about the non-profit. 
 
-I created a database using Google’s Firestore to store all the non-profits information. We then gather the information to the app and display the information to the user. This allows the host of the non-profit to update the app as needed. The non-profited wanted a feature where we can see the number of people attending an event. I do this by creating a button so the user can press the join button which increases the amount of attendees inside the database, I then modify the button to appear that they joined after being pressed in and remembering after closing the app.
+I created a database using Google’s Firestore to store all the non-profits information. We then gather the information to the app and display the information to the user. This allows the host of the non-profit to update the app as needed. The non-profited wanted a feature where we can see the number of people attending an event. I do this by creating a button so the user can press the join button which increases the amount of attendees inside the database, I then modify the button to appear that they joined after being pressed in and persisting the data after closing the app.
 
 
 Here's why:
@@ -73,7 +73,9 @@ Here's why:
 <!-- GETTING STARTED -->
 ## Getting Started
 
-The app is only currently running locally
+The app is on TestFlight: https://testflight.apple.com/join/82SQ7E5W
+
+To run the app locally follow the steps below
 
 ### Prerequisites
 
