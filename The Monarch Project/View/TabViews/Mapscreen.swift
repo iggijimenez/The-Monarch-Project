@@ -41,7 +41,7 @@ struct Mapscreen: View {
               , alignment: .bottom)
         }
       }
-      .navigationBarTitle("Map", displayMode: .inline)
+      .navigationBarTitle("MAP")
     }
   }
   

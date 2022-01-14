@@ -38,7 +38,7 @@ struct Homescreen: View {
         }
         
       }
-      .navigationTitle("Home")
+      .navigationTitle("FEED")
     }
     .onAppear {
       model.getData()

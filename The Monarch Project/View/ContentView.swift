@@ -16,7 +16,7 @@ struct ContentView: View {
                     Image(systemName: "house")
                     Text("Home")
                 }
-            Feedscreen()
+            Postscreen()
                 .tabItem {
                     Image(systemName: "photo")
                     Text("Feed")
