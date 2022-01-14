@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 extension String {
     
@@ -36,6 +37,9 @@ extension String {
 }
 
 struct Postscreen: View {
+    
+    @ObservedObject var model = NameModel()
+    
     let items = Array(1...100).map({"Element \($0)"})
     
     let layout = [
@@ -45,21 +49,20 @@ struct Postscreen: View {
     var body: some View {
         
         NavigationView {
-            VStack {
-                ScrollView {
-                    LazyVGrid(columns: layout) {
-                        Image(uiImage: "https://images.unsplash.com/photo-1608159477202-8a0e27f807b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmVhdXRpZnVsJTIwbmF0dXJlfGVufDB8fDB8fA%3D%3D&w=1000&q=80".load())
-                            .resizable()
-//                        ForEach(items, id: \.self) { item in
-//                            Text(item)
-//                                .padding()
-//                        }
-                    }
+            //            LazyVGrid(columns: layout) {
+            ScrollView {
+                ForEach(model.namelist) { item in
+                    Image(uiImage: item.image.load())
                 }
             }
+            
             .navigationBarTitle("POST")
         }
         
+    }
+    
+    init() {
+        model.getData()
     }
 }
 

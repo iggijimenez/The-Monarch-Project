@@ -21,6 +21,7 @@
 		A44C17B02791CB70007573D5 /* Postscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C17AF2791CB70007573D5 /* Postscreen.swift */; };
 		A44C17B22791D9D7007573D5 /* NameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C17B12791D9D6007573D5 /* NameModel.swift */; };
 		A44C17B42791DA48007573D5 /* Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C17B32791DA48007573D5 /* Names.swift */; };
+		A44C17B627921F93007573D5 /* PostImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C17B527921F93007573D5 /* PostImageView.swift */; };
 		A49E6A3D27160BCE002CC79C /* The_Monarch_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E6A3C27160BCE002CC79C /* The_Monarch_ProjectApp.swift */; };
 		A49E6A3F27160BCE002CC79C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E6A3E27160BCE002CC79C /* ContentView.swift */; };
 		A49E6A4127160BD4002CC79C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A49E6A4027160BD4002CC79C /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		A44C17AF2791CB70007573D5 /* Postscreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postscreen.swift; sourceTree = "<group>"; };
 		A44C17B12791D9D6007573D5 /* NameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameModel.swift; sourceTree = "<group>"; };
 		A44C17B32791DA48007573D5 /* Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Names.swift; sourceTree = "<group>"; };
+		A44C17B527921F93007573D5 /* PostImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageView.swift; sourceTree = "<group>"; };
 		A49E6A3927160BCE002CC79C /* Monarch Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Monarch Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A49E6A3C27160BCE002CC79C /* The_Monarch_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Monarch_ProjectApp.swift; sourceTree = "<group>"; };
 		A49E6A3E27160BCE002CC79C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			children = (
 				A4C6E1232718B4480096344E /* EventDetailView.swift */,
 				A42ED2742719127D008D365B /* UpcomingEventsView.swift */,
+				A44C17B527921F93007573D5 /* PostImageView.swift */,
 			);
 			path = NestedViews;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				A44C17B02791CB70007573D5 /* Postscreen.swift in Sources */,
 				A49E6A3D27160BCE002CC79C /* The_Monarch_ProjectApp.swift in Sources */,
 				A4D727D227164EAB00BCFA2A /* Event_User.swift in Sources */,
+				A44C17B627921F93007573D5 /* PostImageView.swift in Sources */,
 				A415BB7C271789EF0028D138 /* Homescreen.swift in Sources */,
 				A44C17B22791D9D7007573D5 /* NameModel.swift in Sources */,
 				A42ED279271919B7008D365B /* EventBanner.swift in Sources */,

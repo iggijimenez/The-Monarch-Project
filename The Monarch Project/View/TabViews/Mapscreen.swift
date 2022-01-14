@@ -30,16 +30,19 @@ struct Mapscreen: View {
               .fixedSize()
               .foregroundColor(.blue)
           }.padding(10)
-            .background(Color.orange)
+            .background(Color.red)
             .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
             .overlay(
               Image(systemName: "arrowtriangle.left.fill")
                 .rotationEffect(Angle(degrees: 270))
-                .foregroundColor(.orange)
+                .foregroundColor(.red)
                 .offset(y: 10)
               
               , alignment: .bottom)
         }
+      }
+      .onTapGesture {
+          print("sam is dumb")
       }
       .navigationBarTitle("MAP")
     }
