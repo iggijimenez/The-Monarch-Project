@@ -8,32 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
-  
-  var body: some View {
-    TabView {
-      Homescreen()
-        .tabItem {
-          Image(systemName: "house")
-          Text("Home")
+    
+    var body: some View {
+        TabView {
+            Homescreen()
+                .tabItem {
+                    Image(systemName: "house")
+                    Text("Home")
+                }
+            Feedscreen()
+                .tabItem {
+                    Image(systemName: "photo")
+                    Text("Feed")
+                }
+            Mapscreen()
+                .tabItem {
+                    Image(systemName: "map")
+                    Text("Map")
+                }
+            Settingscreen()
+                .tabItem {
+                    Image(systemName: "gear")
+                    Text("Setting")
+                }
         }
-      Feedscreen()
-        .tabItem {
-          Image(systemName: "photo")
-          Text("Feed")
-        }
-      Mapscreen()
-        .tabItem {
-          Image(systemName: "map")
-          Text("Map")
-        }
+        .accentColor(.red)
     }
-    .accentColor(.red)
-  }
-  
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
-  static var previews: some View {
-    ContentView()
-  }
+    static var previews: some View {
+        ContentView()
+    }
 }
