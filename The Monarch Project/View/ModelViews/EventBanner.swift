@@ -8,21 +8,21 @@
 import SwiftUI
 
 struct EventBanner: View {
-  
-  //MARK: BODY
-  var body: some View {
-    ZStack {
-      Rectangle()
-        .frame(width: 220, height: 50)
-        .cornerRadius(20)
-        .foregroundColor(.orange)
-      Text("Upcoming Events")
-        .foregroundColor(.black)
-        .font(.title2)
-        .fontWeight(.bold)
+    
+    //MARK: BODY
+    var body: some View {
+        ZStack {
+            Rectangle()
+                .frame(width: 220, height: 50)
+                .cornerRadius(20)
+                .foregroundColor(.orange)
+            Text("Upcoming Events")
+                .foregroundColor(.black)
+                .font(.title2)
+                .fontWeight(.bold)
+        }
+        .padding(.vertical, 20)
     }
-    .padding(.vertical, 20)
-  }
 }
 
 

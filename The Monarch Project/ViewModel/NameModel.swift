@@ -14,22 +14,22 @@ class NameModel: ObservableObject {
     
     
     func addData(image: String, name: String) {
-      
-      //get a reference to the database
-      let db = Firestore.firestore()
-      
-      //Read the documents at a specific path
-      db.collection("names").addDocument(data: ["image": image,  "name": name]) { error in
         
-        //checking for errors
-        if error == nil {
-          self.getData()
-        } else {
-          
+        //get a reference to the database
+        let db = Firestore.firestore()
+        
+        //Read the documents at a specific path
+        db.collection("names").addDocument(data: ["image": image,  "name": name]) { error in
+            
+            //checking for errors
+            if error == nil {
+                self.getData()
+            } else {
+                
+            }
         }
-      }
-      
-      
+        
+        
     }
     
     

@@ -73,31 +73,7 @@ class ViewModel: ObservableObject {
             
             self.attending = eventDictionary["number_of_attendees"] as? Int ?? 0
             
-//            Event(id: d.documentID,
-//                              name: d["name"] as? String ?? "", //cant find the value
-//                              like: d["like"] as? String ?? "") //cant find the value
-            //get all the documents and create event_user
-            //            self.attending = (eventDocument.get("attendees") as? Int?)!
-//            let result = Result {
-//              try snapshot.data(as: UpcomingEvent.self)
-////              snapshot.da
-//            }
-//            switch result {
-//            case .success(let city):
-//              if let city = city {
-//                // A `City` value was successfully initialized from the DocumentSnapshot.
-//                print("City: \(city)")
-//              } else {
-//                // A nil value was successfully initialized from the DocumentSnapshot,
-//                // or the DocumentSnapshot was nil.
-//                print("Document does not exist")
-//              }
-//            case .failure(let error):
-//              // A `City` value could not be initialized from the DocumentSnapshot.
-//              print("Error decoding city: \(error)")
-//            }
           }
-          
           
         }
       } else {

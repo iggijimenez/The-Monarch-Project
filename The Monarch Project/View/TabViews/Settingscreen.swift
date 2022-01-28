@@ -30,7 +30,7 @@ struct Settingscreen: View {
                         model.addData(image: image, name: name)
                         
                         //clearing the textfield
-                        //                        name = ""
+                        
                     } label: {
                         Image(systemName: "plus.rectangle")
                     }
@@ -47,7 +47,7 @@ struct Settingscreen: View {
                         model.addData(image: image, name: name)
                         
                         //clearing the textfield
-                        //                        name = ""
+                        
                     } label: {
                         Image(systemName: "plus.rectangle")
                     }

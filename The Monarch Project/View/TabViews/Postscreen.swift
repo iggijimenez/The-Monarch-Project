@@ -14,7 +14,6 @@ extension String {
         
         //try catch block
         do {
-            
             // convert string
             guard let url = URL(string: self) else {
                 
@@ -27,7 +26,6 @@ extension String {
             return UIImage(data: data) ?? UIImage()
             
         } catch {
-            //
             
         }
         
