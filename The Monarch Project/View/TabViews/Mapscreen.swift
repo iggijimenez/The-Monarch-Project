@@ -53,6 +53,7 @@ struct Mapscreen: View {
                         Rectangle()
                             .fill(Color.red)
                             .frame(width: 300, height: 100, alignment: .bottom)
+                            .cornerRadius(15)
                         
                         Text("Location: Santa Rosa 4th Street")
                             .foregroundColor(.white)
