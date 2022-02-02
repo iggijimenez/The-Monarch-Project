@@ -16,14 +16,17 @@ struct Place: Identifiable {
 
 struct Mapscreen: View {
     
+    var pressLocation = ["Santa Rosa", "Santa Rosa Mall", "Santa Rosa 4th Street"]
+    var pressLocationX = 0
+    
     @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 38.362745, longitude: -122.688706), latitudinalMeters: 30000, longitudinalMeters: 30000)
     
     var body: some View {
         
         NavigationView {
+            
             ZStack {
                 VStack {
-                    
                     
                     Map(coordinateRegion: $region, annotationItems: annotations) {
                         place in
@@ -46,6 +49,10 @@ struct Mapscreen: View {
                     }
                     .onTapGesture {
                         print("Santa Rosa 4th Street")
+                        if pressLocationX < 2 {
+                            // MARK: Fix this
+                            pressLocationX + 1
+                        }
                     }
                     Spacer()
                     
@@ -55,7 +62,7 @@ struct Mapscreen: View {
                             .frame(width: 300, height: 100, alignment: .bottom)
                             .cornerRadius(15)
                         
-                        Text("Location: Santa Rosa 4th Street")
+                        Text("Location: \(pressLocation[pressLocationX])")
                             .foregroundColor(.white)
                             .fontWeight(.bold)
                     }
@@ -63,8 +70,10 @@ struct Mapscreen: View {
                     
                 }
             }
-            .navigationBarTitle("MAP")
+            .background(Color.black)
+            .navigationBarTitle("MAP").foregroundColor(.red)
         }
+        
     }
     
     let annotations = [
