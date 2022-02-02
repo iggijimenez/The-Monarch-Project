@@ -73,11 +73,13 @@ Here's why:
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To run the app through TestFlight download the link below
+There are two ways to run the app
 
-The app is on TestFlight: https://testflight.apple.com/join/82SQ7E5W
+1. To run the app through TestFlight click on the link below
 
-To run the app locally follow the steps below
+  The app is on TestFlight: https://testflight.apple.com/join/82SQ7E5W
+
+2. To run the app locally follow the steps below
 
 ### Prerequisites
 
