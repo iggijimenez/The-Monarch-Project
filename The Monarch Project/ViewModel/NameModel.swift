@@ -40,6 +40,7 @@ class NameModel: ObservableObject {
         
         //Read the documents at a specific path
         db.collection("names").getDocuments { snapshot, error in
+            print("Name Model")
             
             //checking for errors
             if error == nil {

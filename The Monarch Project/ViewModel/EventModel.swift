@@ -39,6 +39,7 @@ class EventModel: ObservableObject {
         
         //Read the documents at a specific path
         db.collection("events").getDocuments { snapshot, error in
+            print("eventMOdel")
             
             //checking for errors
             if error == nil {

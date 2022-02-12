@@ -38,10 +38,10 @@ struct Postscreen: View {
     
     @ObservedObject var model = NameModel()
     
-    let items = Array(1...100).map({"Element \($0)"})
+    let items = Array(1...10).map({"Element \($0)"})
     
     let layout = [
-        GridItem(.adaptive(minimum: 100))
+        GridItem(.adaptive(minimum: 20))
     ]
     
     var body: some View {
