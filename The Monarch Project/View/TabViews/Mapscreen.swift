@@ -70,7 +70,6 @@ struct Mapscreen: View {
                     
                 }
             }
-            .background(Color.black)
             .navigationBarTitle("MAP").foregroundColor(.red)
         }
         
