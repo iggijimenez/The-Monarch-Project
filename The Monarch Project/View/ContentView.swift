@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     
+    //MARK: FIxes
+    //Need to fix the lag issue
+    
     var body: some View {
         TabView {
             Homescreen()
