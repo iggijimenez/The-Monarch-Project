@@ -19,20 +19,10 @@ struct ContentView: View {
                     Image(systemName: "house")
                     Text("Home")
                 }
-            Postscreen()
-                .tabItem {
-                    Image(systemName: "photo")
-                    Text("Feed")
-                }
             Mapscreen()
                 .tabItem {
                     Image(systemName: "map")
                     Text("Map")
-                }
-            Settingscreen()
-                .tabItem {
-                    Image(systemName: "gear")
-                    Text("Setting")
                 }
         }
         .accentColor(.red)
