@@ -27,6 +27,8 @@ struct UpcomingEventView: View {
     var name = ""
     var like = ""
     var image = ""
+    var joined = "JOINED"
+    var notjoin = "JOIN"
     
     var body: some View {
         VStack {
@@ -63,9 +65,10 @@ struct UpcomingEventView: View {
                     
                     //MARK: NEED TO GET DATA FROM Settingscreen
                     namemodel.addData(image: image, name: name)
+
                 }) {
                     HStack(spacing: 8) {
-                        Text(model.hasTheUserRSVPed ? "JOINED!" : "JOIN")
+                        Text(model.hasTheUserRSVPed ? joined : notjoin)
                         Image(systemName: "person.crop.circle.fill.badge.plus")
                             .imageScale(.large)
                     }
