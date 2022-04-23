@@ -22,7 +22,6 @@ struct UpcomingEventView: View {
     }
     
     var event: Event
-//    var namesetting: Settingscreen
     
     var name = ""
     var like = ""

@@ -43,30 +43,25 @@ struct Mapscreen: View {
                                         .rotationEffect(Angle(degrees: 270))
                                         .foregroundColor(.red)
                                         .offset(y: 10)
-                                    
+
                                     , alignment: .bottom)
                         }
                     }
                     .onTapGesture {
-                        print("Santa Rosa 4th Street")
-                        if pressLocationX < 2 {
-                            // MARK: Fix this
-                            pressLocationX + 1
-                        }
+                        print(annotations)
+                        
                     }
-                    Spacer()
                     
                     ZStack{
                         Rectangle()
                             .fill(Color.red)
-                            .frame(width: 300, height: 100, alignment: .bottom)
+                            .frame(width: 300, height: 50, alignment: .bottom)
                             .cornerRadius(15)
-                        
+
                         Text("Location: \(pressLocation[pressLocationX])")
                             .foregroundColor(.white)
                             .fontWeight(.bold)
                     }
-                    .frame(width: 330, height: 130)
                     
                 }
             }
