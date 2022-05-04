@@ -10,14 +10,18 @@ import Firebase
 
 @main
 struct The_Monarch_ProjectApp: App {
-  
-  init() {
-    FirebaseApp.configure()
-  }
-  
+    
+    @StateObject private var vm = LocationsViewModel()
+    
+    init() {
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            LocationsView()
+                .environmentObject(vm)
         }
     }
 }
