@@ -10,8 +10,6 @@ import SwiftUI
 
 struct UpcomingEventView: View {
     
-    @ObservedObject var namemodel = NameModel()
-    
     @State private var settingname = ""
     
     @StateObject var model: ViewModel
@@ -61,9 +59,6 @@ struct UpcomingEventView: View {
             ZStack {
                 Button(action: {
                     model.addData(name: name, like: like)
-                    
-                    //MARK: NEED TO GET DATA FROM Settingscreen
-                    namemodel.addData(image: image, name: name)
 
                 }) {
                     HStack(spacing: 8) {
