@@ -16,6 +16,13 @@ struct LocationsView: View {
         ZStack{
             Map(coordinateRegion: $vm.mapRegion)
                 .ignoresSafeArea()
+            
+            VStack(spacing: 0) {
+                
+                Text("\(vm.mapLocation.name), \(vm.mapLocation.cityName)")
+                
+            }
+            
         }
     }
 }
