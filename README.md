@@ -64,6 +64,7 @@ Here's why:
 ### Built With
 
 * [SwiftUI](https://developer.apple.com/swift/)
+* [MapKit](https://developer.apple.com/documentation/mapkit/)
 * [Firestore](https://firebase.google.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -75,11 +76,11 @@ Here's why:
 
 There are two ways to run the app
 
-1. To run the app through TestFlight click on the link below
+1. To run the app on an iPhone through TestFlight click on the link below
 
   The app is on TestFlight: https://testflight.apple.com/join/82SQ7E5W
 
-2. To run the app locally follow the steps below
+2. To run the app locally on Mac follow the steps below
 
 ### Prerequisites
 
