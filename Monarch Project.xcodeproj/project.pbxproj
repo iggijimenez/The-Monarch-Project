@@ -31,6 +31,7 @@
 		A4C6E1242718B4480096344E /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C6E1232718B4480096344E /* EventDetailView.swift */; };
 		A4D727D027164D6F00BCFA2A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D727CF27164D6F00BCFA2A /* ViewModel.swift */; };
 		A4D727D227164EAB00BCFA2A /* Event_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D727D127164EAB00BCFA2A /* Event_User.swift */; };
+		A4D9244F2829BD5B00AF1A05 /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D9244E2829BD5B00AF1A05 /* LocationsListView.swift */; };
 		A4E15DFA2717D00200BBE7F7 /* EventModelCoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E15DF92717D00200BBE7F7 /* EventModelCoded.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		A4C6E1232718B4480096344E /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 		A4D727CF27164D6F00BCFA2A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		A4D727D127164EAB00BCFA2A /* Event_User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event_User.swift; sourceTree = "<group>"; };
+		A4D9244E2829BD5B00AF1A05 /* LocationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListView.swift; sourceTree = "<group>"; };
 		A4E15DF92717D00200BBE7F7 /* EventModelCoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModelCoded.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				A4049AF62823114C0091B73C /* LocationsView.swift */,
+				A4D9244E2829BD5B00AF1A05 /* LocationsListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				A49E6A3F27160BCE002CC79C /* ContentView.swift in Sources */,
 				A4D727D027164D6F00BCFA2A /* ViewModel.swift in Sources */,
 				A49E6A3D27160BCE002CC79C /* The_Monarch_ProjectApp.swift in Sources */,
+				A4D9244F2829BD5B00AF1A05 /* LocationsListView.swift in Sources */,
 				A4D727D227164EAB00BCFA2A /* Event_User.swift in Sources */,
 				A415BB7C271789EF0028D138 /* Homescreen.swift in Sources */,
 				A42ED279271919B7008D365B /* EventBanner.swift in Sources */,
