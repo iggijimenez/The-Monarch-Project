@@ -23,7 +23,7 @@ struct LocationsView: View {
                     .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 15)
                 
                 
-                Spacer()
+                //                Spacer()
             }
             
         }
@@ -40,47 +40,65 @@ struct LocationsView_Previews: PreviewProvider {
 extension LocationsView {
     
     private var header: some View {
+        
         VStack {
             
             Button {
                 vm.toggleLocationsList()
             } label: {
                 if #available(iOS 15.0, *) {
-                    Text("\(vm.mapLocation.name), \(vm.mapLocation.cityName)")
-                        .font(.title2)
-                        .fontWeight(.black)
-                        .foregroundColor(.primary)
-                        .frame(height: 55)
-                        .frame(maxWidth: .infinity)
-                        .background(Color.white)
-                        .overlay(alignment: .leading) {
-                            Image(systemName: "arrow.down")
-                                .foregroundColor(.primary)
-                                .font(.headline)
-                                .padding()
-                        }
-                        .cornerRadius(10)
-                    
-                    if vm.showLocationsList {
-                        LocationsListView()
-                    }
-                } else {
-                    // Fallback on earlier versions
-                    Text("\(vm.mapLocation.name), \(vm.mapLocation.cityName)")
-                        .font(.title2)
-                        .fontWeight(.black)
-                        .foregroundColor(.primary)
-                        .frame(height: 55)
-                        .background(Color.white)
-                        .frame(maxWidth: .infinity)
-                    ZStack{
-                        Image(systemName: "arrow.down")
+                    VStack {
+                        //This is the Label
+                        Text("\(vm.mapLocation.name), \(vm.mapLocation.cityName)")
+                            .font(.title2)
+                            .fontWeight(.black)
                             .foregroundColor(.primary)
-                            .font(.headline)
-                            .padding()
+                            .frame(height: 55)
+                            .frame(maxWidth: .infinity)
+                            .background(Color.white)
+                            .overlay(alignment: .leading) {
+                                Image(systemName: "arrow.down")
+                                    .foregroundColor(.primary)
+                                    .font(.headline)
+                                    .padding()
+                            }
+                            .cornerRadius(10)
+                        
+                        Spacer()
                     }
                 }
+                
+                if !vm.showLocationsList {
+                    //                    VStack{
+                    //This is the list
+                    LocationsListView()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.red)
+                    Text("inside the if")
+                    //                    }
+                }
+                else {
+                    Spacer()
+                }
+            } else {
+                // Fallback on earlier versions
+                Text("\(vm.mapLocation.name), \(vm.mapLocation.cityName)")
+                    .font(.title2)
+                    .fontWeight(.black)
+                    .foregroundColor(.primary)
+                    .frame(height: 55)
+                    .background(Color.white)
+                    .frame(maxWidth: .infinity)
+                Text("Else statement")
+                ZStack{
+                    Image(systemName: "arrow.down")
+                        .foregroundColor(.primary)
+                        .font(.headline)
+                        .padding()
+                }
             }
+            
         }
+        
     }
 }

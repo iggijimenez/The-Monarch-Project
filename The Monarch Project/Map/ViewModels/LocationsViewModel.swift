@@ -26,7 +26,7 @@ class LocationsViewModel: ObservableObject {
     let mapSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
     
     //show list of locations
-    @Published var showLocationsList: Bool = false
+    @Published var showLocationsList: Bool = true
     
     
     init() {
