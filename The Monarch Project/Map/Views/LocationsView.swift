@@ -66,38 +66,37 @@ extension LocationsView {
                         
                         Spacer()
                     }
-                }
-                
-                if !vm.showLocationsList {
-                    //                    VStack{
-                    //This is the list
-                    LocationsListView()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.red)
-                    Text("inside the if")
-                    //                    }
-                }
-                else {
-                    Spacer()
-                }
-            } else {
-                // Fallback on earlier versions
-                Text("\(vm.mapLocation.name), \(vm.mapLocation.cityName)")
-                    .font(.title2)
-                    .fontWeight(.black)
-                    .foregroundColor(.primary)
-                    .frame(height: 55)
-                    .background(Color.white)
-                    .frame(maxWidth: .infinity)
-                Text("Else statement")
-                ZStack{
-                    Image(systemName: "arrow.down")
+                    
+                    if !vm.showLocationsList {
+                        //                    VStack{
+                        //This is the list
+                        LocationsListView()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.red)
+                        Text("inside the if")
+                        //                    }
+                    }
+                    else {
+                        Spacer()
+                    }
+                } else {
+                    // Fallback on earlier versions
+                    Text("\(vm.mapLocation.name), \(vm.mapLocation.cityName)")
+                        .font(.title2)
+                        .fontWeight(.black)
                         .foregroundColor(.primary)
-                        .font(.headline)
-                        .padding()
+                        .frame(height: 55)
+                        .background(Color.white)
+                        .frame(maxWidth: .infinity)
+                    Text("Else statement")
+                    ZStack{
+                        Image(systemName: "arrow.down")
+                            .foregroundColor(.primary)
+                            .font(.headline)
+                            .padding()
+                    }
                 }
             }
-            
         }
         
     }
