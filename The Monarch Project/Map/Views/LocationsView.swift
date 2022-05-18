@@ -9,23 +9,21 @@ import SwiftUI
 import MapKit
 
 struct LocationsView: View {
-
+    
     @EnvironmentObject private var vm: LocationsViewModel
-
+    
     var body: some View {
         ZStack{
             Map(coordinateRegion: $vm.mapRegion)
                 .ignoresSafeArea()
-
+            
             VStack(spacing: 0) {
                 header
                     .padding()
                     .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 15)
-
-
-                //                Spacer()
+                
             }
-
+            
         }
     }
 }
@@ -38,7 +36,7 @@ struct LocationsView_Previews: PreviewProvider {
 }
 
 extension LocationsView {
-
+    
     private var header: some View {
         VStack {
             Button {
@@ -50,23 +48,27 @@ extension LocationsView {
                     .foregroundColor(.primary)
                     .frame(height: 55)
                     .frame(maxWidth: .infinity)
+                    .animation(.none, value: vm.mapLocation)
                     .background(Color.white)
                     .overlay(alignment: .leading) {
                         Image(systemName: "arrow.down")
                             .foregroundColor(.primary)
                             .font(.headline)
                             .padding()
+                            .rotationEffect(Angle(degrees: vm.showLocationsList ? 180: 0))
                     }
                     .cornerRadius(10)
             }
-
+            Spacer()
+            
             if vm.showLocationsList {
                 LocationsListView()
-                    .frame(maxWidth: .infinity)
-                    .background(Color.red)
-            } else {
-                Spacer()
+//                    .frame(maxWidth: .infinity)
+                    .background(.thinMaterial)
+                    .cornerRadius(10)
+                    .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 15)
             }
         }
+        
     }
 }

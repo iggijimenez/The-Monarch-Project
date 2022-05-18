@@ -15,10 +15,13 @@ struct LocationsListView: View {
         VStack {
             List {
                 ForEach(vm.locations) { location in
-                    listRowView(location: location)
-                        .padding(.vertical, 4)
-                        .listRowBackground(Color.white)
-                    
+                    Button {
+                        vm.showNextLocation(location: location)
+                    } label: {
+                        listRowView(location: location)
+                    }
+                    .padding(.vertical, 4)
+                    .listRowBackground(Color.white)
                 }
             }
             .listStyle(PlainListStyle())

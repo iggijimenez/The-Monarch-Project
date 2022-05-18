@@ -12,6 +12,8 @@ struct ContentView: View {
     //MARK: FIxes
     //Need to fix the lag issue
     
+    @StateObject private var vm = LocationsViewModel()
+    
     var body: some View {
         TabView {
             Homescreen()
@@ -23,6 +25,12 @@ struct ContentView: View {
                 .tabItem {
                     Image(systemName: "map")
                     Text("Map")
+                }
+            LocationsView()
+                .environmentObject(vm)
+                .tabItem {
+                    Image(systemName: "map")
+                    Text("mappp")
                 }
         }
         .accentColor(.red)
