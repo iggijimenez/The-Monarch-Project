@@ -12,7 +12,7 @@ struct ContentView: View {
     //MARK: FIxes
     //Need to fix the lag issue
     
-    @StateObject private var vm = LocationsViewModel()
+    @StateObject private var vm = LocationsViewModel() 
     
     var body: some View {
         TabView {
