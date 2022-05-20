@@ -30,6 +30,7 @@
 		A49E6A4E27160EE1002CC79C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A49E6A4D27160EE1002CC79C /* FirebaseFirestore */; };
 		A49E6A5027160EE1002CC79C /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = A49E6A4F27160EE1002CC79C /* FirebaseFirestoreSwift-Beta */; };
 		A4AFBDFB28374D68007FC01C /* LocationMapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFBDFA28374D68007FC01C /* LocationMapAnnotationView.swift */; };
+		A4AFBDFD28375AC8007FC01C /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFBDFC28375AC8007FC01C /* LocationDetailView.swift */; };
 		A4C6E1242718B4480096344E /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C6E1232718B4480096344E /* EventDetailView.swift */; };
 		A4D727D027164D6F00BCFA2A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D727CF27164D6F00BCFA2A /* ViewModel.swift */; };
 		A4D727D227164EAB00BCFA2A /* Event_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D727D127164EAB00BCFA2A /* Event_User.swift */; };
@@ -60,6 +61,7 @@
 		A49E6A4327160BD4002CC79C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A49E6A4A27160D54002CC79C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A4AFBDFA28374D68007FC01C /* LocationMapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapAnnotationView.swift; sourceTree = "<group>"; };
+		A4AFBDFC28375AC8007FC01C /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		A4C6E1232718B4480096344E /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 		A4D727CF27164D6F00BCFA2A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		A4D727D127164EAB00BCFA2A /* Event_User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event_User.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				A4D9244E2829BD5B00AF1A05 /* LocationsListView.swift */,
 				A40F8B3C28360F3E004A1A73 /* LocationPreviewView.swift */,
 				A4AFBDFA28374D68007FC01C /* LocationMapAnnotationView.swift */,
+				A4AFBDFC28375AC8007FC01C /* LocationDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			files = (
 				A44BA6972719425F00B8046B /* EventDataModel.swift in Sources */,
 				A4C6E1242718B4480096344E /* EventDetailView.swift in Sources */,
+				A4AFBDFD28375AC8007FC01C /* LocationDetailView.swift in Sources */,
 				A42ED2752719127E008D365B /* UpcomingEventsView.swift in Sources */,
 				A42ED277271912C8008D365B /* UpcomingView.swift in Sources */,
 				A4AFBDFB28374D68007FC01C /* LocationMapAnnotationView.swift in Sources */,
