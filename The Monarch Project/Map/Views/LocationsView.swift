@@ -22,7 +22,20 @@ struct LocationsView: View {
                     .padding()
                     .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 15)
                 
-                locationsPreviewStack
+                ZStack {
+                    VStack {
+                        Spacer()
+                        Rectangle()
+                            .foregroundColor(Color.white)
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 80)
+                    }
+                    .ignoresSafeArea()
+                    
+                    locationsPreviewStack
+                    
+                }
+                .ignoresSafeArea()
             }
         }
         .sheet(item: $vm.sheetLocation, onDismiss: nil) { location in
@@ -41,6 +54,7 @@ struct LocationsView_Previews: PreviewProvider {
 extension LocationsView {
     
     private var header: some View {
+        
         VStack {
             Button {
                 vm.toggleLocationsList()
@@ -48,7 +62,7 @@ extension LocationsView {
                 Text("\(vm.mapLocation.name), \(vm.mapLocation.cityName)")
                     .font(.title2)
                     .fontWeight(.black)
-//                    .foregroundColor(Color.red)
+                //                    .foregroundColor(Color.red)
                     .foregroundColor(.primary)
                     .frame(height: 55)
                     .frame(maxWidth: .infinity)
