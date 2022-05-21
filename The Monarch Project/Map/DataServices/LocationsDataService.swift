@@ -10,48 +10,57 @@ import MapKit
 
 class LocationsDataService {
     
+//    let annotations = [
+//        Place(name: "Mont", coordinate: CLLocationCoordinate2D(latitude: 38.440740, longitude: -122.684596)),
+//        Place(name: "4th street", coordinate: CLLocationCoordinate2D(latitude: 38.4401872, longitude: -122.7140828)),
+//        Place(name: "unknown location", coordinate: CLLocationCoordinate2D(latitude: 38.443551, longitude: -122.717873)),
+//        Place(name: "piner road", coordinate: CLLocationCoordinate2D(latitude: 38.472084, longitude: -122.732386)),
+//        Place(name: "Rohert Park", coordinate: CLLocationCoordinate2D(latitude: 38.327305, longitude: -122.680399)),
+//        Place(name: "Petaluma 1", coordinate: CLLocationCoordinate2D(latitude: 38.235570, longitude: -122.634991)),
+//        Place(name: "petaluma 2", coordinate: CLLocationCoordinate2D(latitude: 38.231973, longitude: -122.636538)),
+//        Place(name: "Petaluma 3", coordinate: CLLocationCoordinate2D(latitude: 38.240320, longitude: -122.621978))
+//    ]
+
+    
     static let locations: [Location] = [
         Location(
-            name: "Colosseum",
-            cityName: "Rome",
-            coordinates: CLLocationCoordinate2D(latitude: 41.8902, longitude: 12.4922),
-            description: "The Colosseum is an oval amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum. It is the largest ancient amphitheatre ever built, and is still the largest standing amphitheatre in the world today, despite its age.",
+            name: "Dreamer Mural",
+            cityName: "Santa Rosa",
+            coordinates: CLLocationCoordinate2D(latitude: 38.440740, longitude: -122.684596),
+            description: "We painted a mural to make our community more aware of the immigrants in Sonoma County, their beautiful presence in our community, and the power of unity as one. With the collaboration of Art Start Santa Rosa, Montgomery High Schools art department, and many other organizations, we brought to life the 12 by 32 ft transportable piece. The mural was painted and funded entirely by members of our community, and the mural itself was designed by Rima Makaryan, an immigrant herself, and a member of our team. The mural is now ready for public display, located in a hidden part of Montgomery High School in Santa Rosa. Soon, however, we plan on bringing it to a more accessible",
             imageNames: [
-                "rome-colosseum-1",
-                "rome-colosseum-2",
-                "rome-colosseum-3",
+                "dreamer_mural"
+//                "rome-colosseum-2",
+//                "rome-colosseum-3",
             ],
             link: "https://en.wikipedia.org/wiki/Colosseum"),
         Location(
-            name: "Pantheon",
-            cityName: "Rome",
-            coordinates: CLLocationCoordinate2D(latitude: 41.8986, longitude: 12.4769),
-            description: "The Pantheon is a former Roman temple and since the year 609 a Catholic church, in Rome, Italy, on the site of an earlier temple commissioned by Marcus Agrippa during the reign of Augustus.",
+            name: "Bollywood Bar and Clay Oven",
+            cityName: "Santa Rosa",
+            coordinates: CLLocationCoordinate2D(latitude: 38.4401872, longitude: -122.7140828),
+            description: "There is writing on this mural/post.",
             imageNames: [
-                "rome-pantheon-1",
-                "rome-pantheon-2",
-                "rome-pantheon-3",
+                "bollywood_bar_butterfly"
+//                "rome-pantheon-2",
+//                "rome-pantheon-3",
             ],
             link: "https://en.wikipedia.org/wiki/Pantheon,_Rome"),
         Location(
-            name: "Trevi Fountain",
-            cityName: "Rome",
-            coordinates: CLLocationCoordinate2D(latitude: 41.9009, longitude: 12.4833),
-            description: "The Trevi Fountain is a fountain in the Trevi district in Rome, Italy, designed by Italian architect Nicola Salvi and completed by Giuseppe Pannini and several others. Standing 26.3 metres high and 49.15 metres wide, it is the largest Baroque fountain in the city and one of the most famous fountains in the world.",
+            name: "Brew Butterfly",
+            cityName: "Santa Rosa",
+            coordinates: CLLocationCoordinate2D(latitude: 38.443551, longitude: -122.717873),
+            description: "Brew, being one of the most beautifully open hubs for LGBTQ acceptance, is a perfect host for this butterfly, a symbol of the intersectionality of the issues we face today.",
             imageNames: [
-                "rome-trevifountain-1",
-                "rome-trevifountain-2",
-                "rome-trevifountain-3",
+                "brew_butterfly"
             ],
             link: "https://en.wikipedia.org/wiki/Trevi_Fountain"),
         Location(
-            name: "Eiffel Tower",
-            cityName: "Paris",
-            coordinates: CLLocationCoordinate2D(latitude: 48.8584, longitude: 2.2945),
-            description: "The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower. Locally nicknamed 'La dame de fer', it was constructed from 1887 to 1889 as the centerpiece of the 1889 World's Fair and was initially criticized by some of France's leading artists and intellectuals for its design, but it has become a global cultural icon of France and one of the most recognizable structures in the world.",
+            name: "Verity Santa Rosa",
+            cityName: "Santa Rosa",
+            coordinates: CLLocationCoordinate2D(latitude: 38.472084, longitude: -122.732386),
+            description: "This butterfly represents the story of a young boy who immigrated to California from Guatemala City with his family when he was 7 years old. Guatemala city is known for its rates of gang violence and poverty. Before immigrating without documentation, his family attempted to come legally numerous times. But the lines and wait times were too long, and the fees too high for his family. Today, he has found what his family has hoped for in Sonoma County, he is an outstanding student at his high school, a team captain for his cross country team, and will be applying to colleges in the fall. A video telling his story in dept is coming soon.",
             imageNames: [
-                "paris-eiffeltower-1",
-                "paris-eiffeltower-2",
+                "verity_butterfly"
             ],
             link: "https://en.wikipedia.org/wiki/Eiffel_Tower"),
         Location(

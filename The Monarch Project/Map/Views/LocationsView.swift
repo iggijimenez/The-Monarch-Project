@@ -48,6 +48,7 @@ extension LocationsView {
                 Text("\(vm.mapLocation.name), \(vm.mapLocation.cityName)")
                     .font(.title2)
                     .fontWeight(.black)
+//                    .foregroundColor(Color.red)
                     .foregroundColor(.primary)
                     .frame(height: 55)
                     .frame(maxWidth: .infinity)
@@ -55,7 +56,7 @@ extension LocationsView {
                     .background(Color.white)
                     .overlay(alignment: .leading) {
                         Image(systemName: "arrow.down")
-                            .foregroundColor(.primary)
+                            .foregroundColor(Color.red)
                             .font(.headline)
                             .padding()
                             .rotationEffect(Angle(degrees: vm.showLocationsList ? 180: 0))
