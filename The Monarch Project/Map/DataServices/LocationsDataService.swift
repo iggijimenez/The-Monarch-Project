@@ -10,17 +10,17 @@ import MapKit
 
 class LocationsDataService {
     
-//    let annotations = [
-//        Place(name: "Mont", coordinate: CLLocationCoordinate2D(latitude: 38.440740, longitude: -122.684596)),
-//        Place(name: "4th street", coordinate: CLLocationCoordinate2D(latitude: 38.4401872, longitude: -122.7140828)),
-//        Place(name: "unknown location", coordinate: CLLocationCoordinate2D(latitude: 38.443551, longitude: -122.717873)),
-//        Place(name: "piner road", coordinate: CLLocationCoordinate2D(latitude: 38.472084, longitude: -122.732386)),
-//        Place(name: "Rohert Park", coordinate: CLLocationCoordinate2D(latitude: 38.327305, longitude: -122.680399)),
-//        Place(name: "Petaluma 1", coordinate: CLLocationCoordinate2D(latitude: 38.235570, longitude: -122.634991)),
-//        Place(name: "petaluma 2", coordinate: CLLocationCoordinate2D(latitude: 38.231973, longitude: -122.636538)),
-//        Place(name: "Petaluma 3", coordinate: CLLocationCoordinate2D(latitude: 38.240320, longitude: -122.621978))
-//    ]
-
+    //    let annotations = [
+    //        Place(name: "Mont", coordinate: CLLocationCoordinate2D(latitude: 38.440740, longitude: -122.684596)),
+    //        Place(name: "4th street", coordinate: CLLocationCoordinate2D(latitude: 38.4401872, longitude: -122.7140828)),
+    //        Place(name: "unknown location", coordinate: CLLocationCoordinate2D(latitude: 38.443551, longitude: -122.717873)),
+    //        Place(name: "piner road", coordinate: CLLocationCoordinate2D(latitude: 38.472084, longitude: -122.732386)),
+    //        Place(name: "Rohert Park", coordinate: CLLocationCoordinate2D(latitude: 38.327305, longitude: -122.680399)),
+    //        Place(name: "Petaluma 1", coordinate: CLLocationCoordinate2D(latitude: 38.235570, longitude: -122.634991)),
+    //        Place(name: "petaluma 2", coordinate: CLLocationCoordinate2D(latitude: 38.231973, longitude: -122.636538)),
+    //        Place(name: "Petaluma 3", coordinate: CLLocationCoordinate2D(latitude: 38.240320, longitude: -122.621978))
+    //    ]
+    
     
     static let locations: [Location] = [
         Location(
@@ -30,8 +30,6 @@ class LocationsDataService {
             description: "We painted a mural to make our community more aware of the immigrants in Sonoma County, their beautiful presence in our community, and the power of unity as one. With the collaboration of Art Start Santa Rosa, Montgomery High Schools art department, and many other organizations, we brought to life the 12 by 32 ft transportable piece. The mural was painted and funded entirely by members of our community, and the mural itself was designed by Rima Makaryan, an immigrant herself, and a member of our team. The mural is now ready for public display, located in a hidden part of Montgomery High School in Santa Rosa. Soon, however, we plan on bringing it to a more accessible",
             imageNames: [
                 "dreamer_mural"
-//                "rome-colosseum-2",
-//                "rome-colosseum-3",
             ],
             link: "https://en.wikipedia.org/wiki/Colosseum"),
         Location(
@@ -41,8 +39,6 @@ class LocationsDataService {
             description: "There is writing on this mural/post.",
             imageNames: [
                 "bollywood_bar_butterfly"
-//                "rome-pantheon-2",
-//                "rome-pantheon-3",
             ],
             link: "https://en.wikipedia.org/wiki/Pantheon,_Rome"),
         Location(
@@ -63,17 +59,6 @@ class LocationsDataService {
                 "verity_butterfly"
             ],
             link: "https://en.wikipedia.org/wiki/Eiffel_Tower"),
-        Location(
-            name: "Louvre Museum",
-            cityName: "Paris",
-            coordinates: CLLocationCoordinate2D(latitude: 48.8606, longitude: 2.3376),
-            description: "The Louvre, or the Louvre Museum, is the world's most-visited museum and a historic monument in Paris, France. It is the home of some of the best-known works of art, including the Mona Lisa and the Venus de Milo. A central landmark of the city, it is located on the Right Bank of the Seine in the city's 1st arrondissement.",
-            imageNames: [
-                "paris-louvre-1",
-                "paris-louvre-2",
-                "paris-louvre-3",
-            ],
-            link: "https://en.wikipedia.org/wiki/Louvre"),
     ]
     
 }
