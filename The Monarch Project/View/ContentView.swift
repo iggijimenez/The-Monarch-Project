@@ -21,16 +21,16 @@ struct ContentView: View {
                     Image(systemName: "house")
                     Text("Home")
                 }
-            Mapscreen()
-                .tabItem {
-                    Image(systemName: "map")
-                    Text("Map")
-                }
+//            Mapscreen()
+//                .tabItem {
+//                    Image(systemName: "map")
+//                    Text("Map")
+//                }
             LocationsView()
                 .environmentObject(vm)
                 .tabItem {
                     Image(systemName: "map")
-                    Text("mappp")
+                    Text("Map")
                 }
         }
         .accentColor(.red)
