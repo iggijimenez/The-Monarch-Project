@@ -15,7 +15,7 @@ struct LocationsView: View {
     var body: some View {
         ZStack{
             mapLayer
-                .ignoresSafeArea()
+//                .ignoresSafeArea()
             
             VStack(spacing: 0) {
                 header
@@ -25,12 +25,13 @@ struct LocationsView: View {
                 ZStack {
                     VStack {
                         Spacer()
-                        Rectangle()
-                            .foregroundColor(Color.white)
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 80)
+                        //MARK: Testing the bottom white bar
+//                        Rectangle()
+//                            .foregroundColor(Color.white)
+//                            .frame(maxWidth: .infinity)
+//                            .frame(height: 80)
                     }
-                    .ignoresSafeArea()
+//                    .ignoresSafeArea()
                     
                     locationsPreviewStack
                     

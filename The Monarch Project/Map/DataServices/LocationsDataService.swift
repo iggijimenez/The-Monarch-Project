@@ -2,8 +2,6 @@
 //  LocationsDataService.swift
 //  MapTest
 //
-//  Created by Nick Sarno on 11/26/21.
-//
 
 import Foundation
 import MapKit

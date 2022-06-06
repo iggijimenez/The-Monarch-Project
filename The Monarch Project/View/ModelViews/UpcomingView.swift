@@ -20,7 +20,7 @@ struct UpcomingView: View {
         ZStack(alignment: .topLeading) {
             
             ZStack{
-                Image("dreamer_mural")
+                Image("dreamer_mural") //MARK: NEEDS TO BE A VARAIBLE
                     .resizable()
                     .scaledToFit()
                     .cornerRadius(4)

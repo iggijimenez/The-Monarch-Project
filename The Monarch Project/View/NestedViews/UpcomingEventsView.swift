@@ -24,6 +24,7 @@ struct UpcomingEventView: View {
     var name = ""
     var like = ""
     var image = ""
+    var going = ""
     var joined = "JOINED"
     var notjoin = "JOIN"
     
@@ -58,7 +59,14 @@ struct UpcomingEventView: View {
                 .fontWeight(.black)
             ZStack {
                 Button(action: {
-                    model.addData(name: name, like: like)
+                    //MARK: Update Button
+//                    model.addData(name: name, like: like)
+
+                    if model.hasTheUserRSVPed {
+                        model.deleteData(name: name, like: like) //if this this true
+                    } else {
+                        model.addData(name: name, like: like) //if you click to go
+                    }
 
                 }) {
                     HStack(spacing: 8) {

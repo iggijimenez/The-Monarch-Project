@@ -35,6 +35,20 @@ class ViewModel: ObservableObject {
     attending += 1
     rememberThisEventTheUserHasRSVPed(event: event)
   }
+    
+    func deleteData(name: String, like: String) {
+      
+      //get a reference to the database
+      let db = Firestore.firestore()
+      
+      //Read the documents at a specific path
+      let reference = db.collection("upcoming_event").document(event.id)
+      reference.updateData([
+        "number_of_attendees": FieldValue.increment(Int64(-1)) //MARK: Decrement
+      ])
+      attending -= 1
+        rememberThisEventTheUserHasNotRSVPed(event: event)
+    }
   
   private func rememberThisEventTheUserHasRSVPed(event: Event) {
     // use UserDefaults to save the even'ts ID
@@ -44,6 +58,14 @@ class ViewModel: ObservableObject {
     hasTheUserRSVPed = true
   }
   
+    private func rememberThisEventTheUserHasNotRSVPed(event: Event) {
+      // use UserDefaults to save the even'ts ID
+      let defaults = UserDefaults.standard
+      defaults.set(false, forKey: event.id)
+      
+      hasTheUserRSVPed = false
+    }
+    
   private static func hasTheUserHasRSVPed(event: Event) -> Bool {
     // use UserDefaults to read the event's ID
     let defaults = UserDefaults.standard
@@ -66,7 +88,7 @@ class ViewModel: ObservableObject {
         //no errors
         if let snapshot = snapshot {
           
-          //update the list property in hte main thread
+          //update the list property in the main thread
           DispatchQueue.main.async {
             let eventDocument = snapshot
             guard let eventDictionary = eventDocument.data() else { return }
