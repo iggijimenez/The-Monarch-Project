@@ -46,6 +46,7 @@ extension LocationsListView {
                         .resizable()
                         .scaledToFill()
                         .frame(width: 45, height: 45)
+                        .clipped()
                 }
                 
                 VStack(alignment: .leading) {
