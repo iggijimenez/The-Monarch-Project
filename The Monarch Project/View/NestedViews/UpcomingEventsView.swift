@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
-
+import MapKit
 
 struct UpcomingEventView: View {
     
     @State private var settingname = ""
+    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.50007773, longitude: -0.1246402) , span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
     
     @StateObject var model: ViewModel
     
@@ -29,62 +30,70 @@ struct UpcomingEventView: View {
     var notjoin = "JOIN"
     
     var body: some View {
-        VStack {
-            
-            HStack {
-                VStack(alignment: .leading) {
-                    
-                    Image("dreamer_mural") //event.image
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 280)
-                        .cornerRadius(25)
+        ScrollView {
+            VStack {
+                
+                HStack {
+                    VStack(alignment: .leading) {
+                        
+                        Image("dreamer_mural") //event.image
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 280)
+                            .cornerRadius(25)
+                    }
                 }
-            }
-            
-            Text(event.name)
-                .font(.title2)
-                .fontWeight(.semibold)
-                .lineLimit(1)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal)
-            
-            Text(event.description)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal)
-            Spacer()
-            
-            Text("\(model.attending) are attending")
-                .font(.title)
-                .fontWeight(.black)
-            ZStack {
-                Button(action: {
-                    //MARK: Update Button
-//                    model.addData(name: name, like: like)
-
-                    if model.hasTheUserRSVPed {
-                        model.deleteData(name: name, like: like) //if this this true
-                    } else {
-                        model.addData(name: name, like: like) //if you click to go
-                    }
-
-                }) {
-                    HStack(spacing: 8) {
-                        Text(model.hasTheUserRSVPed ? joined : notjoin)
-                        Image(systemName: "person.crop.circle.fill.badge.plus")
-                            .imageScale(.large)
-                    }
+                
+                Text(event.name)
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .lineLimit(1)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal)
+                
+                Text(event.description)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal)
+                Spacer()
+                
+                Text("\(model.attending) are attending")
+                    .font(.title)
+                    .fontWeight(.black)
+                ZStack {
+                    Button(action: {
+                        //MARK: Update Button
+                        //                    model.addData(name: name, like: like)
+                        
+                        if model.hasTheUserRSVPed {
+                            model.deleteData(name: name, like: like) //if this this true
+                        } else {
+                            model.addData(name: name, like: like) //if you click to go
+                        }
+                        
+                    }) {
+                        HStack(spacing: 8) {
+                            Text(model.hasTheUserRSVPed ? joined : notjoin)
+                            Image(systemName: "person.crop.circle.fill.badge.plus")
+                                .imageScale(.large)
+                        }
                         .padding(.horizontal, 16)
                         .padding(.vertical, 10)
                         .background(model.hasTheUserRSVPed ? Color.green : Color.blue)
                         .cornerRadius(15)
-                }//: BUTTON
-                .accentColor(Color.black)
-                .padding()
+                    }//: BUTTON
+                    .accentColor(Color.black)
+                    .padding()
+                }
+                
+                
+                Spacer()
+                
             }
             
-            
-            Spacer()
+            Map(coordinateRegion: $region)
+                .allowsHitTesting(false)
+                .aspectRatio(1, contentMode: .fit)
+                .cornerRadius(30)
         }
         .onAppear {
             model.getData()

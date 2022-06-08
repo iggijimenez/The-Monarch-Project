@@ -20,8 +20,6 @@ struct The_Monarch_ProjectApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-//            LocationsView()
-//                .environmentObject(vm)
         }
     }
 }
