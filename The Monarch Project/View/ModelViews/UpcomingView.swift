@@ -13,7 +13,7 @@ struct UpcomingView: View {
     var event: Event
     @State var variable1 = false
     
-    //MARK: BODY
+    //MARK: This is going to be what the admin is about to update
     var body: some View {
         
         
@@ -28,6 +28,7 @@ struct UpcomingView: View {
                         Rectangle()
                             .foregroundColor(.black)
                             .opacity(0.4))
+                
                 Text(event.name)
                     .fontWeight(.semibold)
                     .font(.title)
@@ -38,7 +39,7 @@ struct UpcomingView: View {
                 Rectangle()
                     .frame(width: 230, height: 50)
                     .foregroundColor(Color.orange)
-                    .cornerRadius(10)
+                    .cornerRadius(0)
                 Text("Upcoming Events")
                     .padding(1)
                     .foregroundColor(Color.black)

@@ -8,34 +8,50 @@
 import SwiftUI
 
 struct EventDetailView: View {
-    
     var event: Event
     
     var body: some View {
         VStack {
-            Image(event.image) //event.image
-                .resizable()
-                .scaledToFit()
-                .frame(height: 250)
-                .cornerRadius(25)
+            eventImage
             
-            Text(event.name)
-                .font(.title2)
-                .fontWeight(.semibold)
-                .lineLimit(1)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal)
+            eventName
             
-            ScrollView{
-                Text(event.description)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal)
-            }
+            eventDesc
             
             Spacer()
         }
     }
+    
+    
+    private var eventImage: some View {
+        Image(event.image) //event.image
+            .resizable()
+            .scaledToFit()
+            .frame(height: 250)
+            .cornerRadius(25)
+    }
+    
+    
+    private var eventName: some View {
+        Text(event.name)
+            .font(.title2)
+            .fontWeight(.semibold)
+            .lineLimit(1)
+            .multilineTextAlignment(.center)
+            .padding(.horizontal)
+    }
+    
+    
+    private var eventDesc: some View {
+        ScrollView{
+            Text(event.description)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal)
+        }
+    }
+    
 }
+
 
 struct EventDetailView_Previews: PreviewProvider {
     static var event1 = Event(id: "", name: "String", image: "String", description: "String")

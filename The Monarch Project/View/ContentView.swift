@@ -9,9 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     
-    //MARK: FIxes
-    //Need to fix the lag issue
-    
     @StateObject private var vm = LocationsViewModel() 
     
     var body: some View {
@@ -21,11 +18,6 @@ struct ContentView: View {
                     Image(systemName: "house")
                     Text("Home")
                 }
-//            Mapscreen()
-//                .tabItem {
-//                    Image(systemName: "map")
-//                    Text("Map")
-//                }
             LocationsView()
                 .environmentObject(vm)
                 .tabItem {

@@ -33,67 +33,99 @@ struct UpcomingEventView: View {
         ScrollView {
             VStack {
                 
-                HStack {
-                    VStack(alignment: .leading) {
-                        
-                        Image("dreamer_mural") //event.image
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 280)
-                            .cornerRadius(25)
-                    }
-                }
+                eventImage
                 
-                Text(event.name)
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                    .lineLimit(1)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal)
+                eventName
                 
-                Text(event.description)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal)
+                eventDesc
+                
                 Spacer()
                 
-                Text("\(model.attending) are attending")
-                    .font(.title)
-                    .fontWeight(.black)
-                ZStack {
-                    Button(action: {
-                        if model.hasTheUserRSVPed {
-                            model.deleteData(name: name, like: like) //if this this true
-                        } else {
-                            model.addData(name: name, like: like) //if you click to go
-                        }
-                        
-                    }) {
-                        HStack(spacing: 8) {
-                            Text(model.hasTheUserRSVPed ? joined : notjoin)
-                            Image(systemName: "person.crop.circle.fill.badge.plus")
-                                .imageScale(.large)
-                        }
-                        .padding(.horizontal, 16)
-                        .padding(.vertical, 10)
-                        .background(model.hasTheUserRSVPed ? Color.green : Color.blue)
-                        .cornerRadius(15)
-                    }//: BUTTON
-                    .accentColor(Color.black)
-                    .padding()
-                }
+                modelAttending
                 
+                joinButton
                 
                 Spacer()
                 
             }
             
-            Map(coordinateRegion: $region)
-                .allowsHitTesting(false)
-                .aspectRatio(1, contentMode: .fit)
-                .cornerRadius(30)
+            mapEvent
+            
         }
         .onAppear {
             model.getData()
         }
+    }
+    
+    
+    private var eventImage: some View {
+        HStack {
+            VStack(alignment: .leading) {
+                
+                Image("dreamer_mural") //event.image
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 280)
+                    .cornerRadius(25)
+            }
+        }
+    }
+    
+    
+    private var eventName: some View {
+        Text(event.name)
+            .font(.title2)
+            .fontWeight(.semibold)
+            .lineLimit(1)
+            .multilineTextAlignment(.center)
+            .padding(.horizontal)
+    }
+    
+    
+    private var eventDesc: some View {
+        Text(event.description)
+            .multilineTextAlignment(.center)
+            .padding(.horizontal)
+    }
+    
+    
+    private var modelAttending: some View {
+        Text("\(model.attending) are attending")
+            .font(.title)
+            .fontWeight(.black)
+    }
+    
+    
+    private var joinButton: some View {
+        ZStack {
+            Button(action: {
+                if model.hasTheUserRSVPed {
+                    model.deleteData(name: name, like: like) //if this this true
+                } else {
+                    model.addData(name: name, like: like) //if you click to go
+                }
+                
+            }) {
+                HStack(spacing: 8) {
+                    Text(model.hasTheUserRSVPed ? joined : notjoin)
+                    Image(systemName: "person.crop.circle.fill.badge.plus")
+                        .imageScale(.large)
+                }
+                .padding(.horizontal, 16)
+                .padding(.vertical, 10)
+                .background(model.hasTheUserRSVPed ? Color.green : Color.blue)
+                .cornerRadius(15)
+            }//: BUTTON
+            .accentColor(Color.black)
+            .padding()
+        }
+    }
+    
+    
+    private var mapEvent: some View {
+        Map(coordinateRegion: $region)
+            .allowsHitTesting(false)
+            .aspectRatio(1, contentMode: .fit)
+            .cornerRadius(30)
     }
 }
