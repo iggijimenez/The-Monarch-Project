@@ -23,6 +23,7 @@
 		A44BA6972719425F00B8046B /* EventDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44BA6962719425F00B8046B /* EventDataModel.swift */; };
 		A44BA6992719453300B8046B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44BA6982719453300B8046B /* Event.swift */; };
 		A44BA69B271A233700B8046B /* UpcomingEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44BA69A271A233600B8046B /* UpcomingEvent.swift */; };
+		A46817DB28571041005A67AB /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46817DA28571041005A67AB /* UserView.swift */; };
 		A49E6A3D27160BCE002CC79C /* The_Monarch_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E6A3C27160BCE002CC79C /* The_Monarch_ProjectApp.swift */; };
 		A49E6A3F27160BCE002CC79C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E6A3E27160BCE002CC79C /* ContentView.swift */; };
 		A49E6A4427160BD4002CC79C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A49E6A4327160BD4002CC79C /* Preview Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		A44BA6962719425F00B8046B /* EventDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDataModel.swift; sourceTree = "<group>"; };
 		A44BA6982719453300B8046B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		A44BA69A271A233600B8046B /* UpcomingEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingEvent.swift; sourceTree = "<group>"; };
+		A46817DA28571041005A67AB /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		A49E6A3927160BCE002CC79C /* Monarch Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Monarch Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A49E6A3C27160BCE002CC79C /* The_Monarch_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Monarch_ProjectApp.swift; sourceTree = "<group>"; };
 		A49E6A3E27160BCE002CC79C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -157,6 +159,38 @@
 			path = TabViews;
 			sourceTree = "<group>";
 		};
+		A46817D628570FE5005A67AB /* UserProfiles */ = {
+			isa = PBXGroup;
+			children = (
+				A46817D928571020005A67AB /* Models */,
+				A46817D828571016005A67AB /* ViewModels */,
+				A46817D728571002005A67AB /* Views */,
+			);
+			path = UserProfiles;
+			sourceTree = "<group>";
+		};
+		A46817D728571002005A67AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A46817DA28571041005A67AB /* UserView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A46817D828571016005A67AB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A46817D928571020005A67AB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A49E6A3027160BCE002CC79C = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +212,7 @@
 			children = (
 				A49E6A3C27160BCE002CC79C /* The_Monarch_ProjectApp.swift */,
 				A4049AEF282310240091B73C /* Map */,
+				A46817D628570FE5005A67AB /* UserProfiles */,
 				A4D727D32716550A00BCFA2A /* View */,
 				A4D727D52716553200BCFA2A /* Model */,
 				A4D727D42716551C00BCFA2A /* ViewModel */,
@@ -308,6 +343,7 @@
 			files = (
 				A44BA6972719425F00B8046B /* EventDataModel.swift in Sources */,
 				A4C6E1242718B4480096344E /* EventDetailView.swift in Sources */,
+				A46817DB28571041005A67AB /* UserView.swift in Sources */,
 				A4AFBDFD28375AC8007FC01C /* LocationDetailView.swift in Sources */,
 				A42ED2752719127E008D365B /* UpcomingEventsView.swift in Sources */,
 				A42ED277271912C8008D365B /* UpcomingView.swift in Sources */,
