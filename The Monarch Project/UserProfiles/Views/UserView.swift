@@ -10,24 +10,32 @@ import SwiftUI
 struct UserView: View {
     var body: some View {
         VStack {
-            ZStack {
-                Rectangle()
-                    .frame(width: .infinity, height: 100)
-                    .foregroundColor(Color.red)
-                HStack {
-                    Circle()
-                        .frame(width: 100, height: 100, alignment: .leading)
-                        .foregroundColor(.gray)
-                        .opacity(0.5)
-                    VStack {
-                        Text("Username")
-                            .font(.title)
-                            .fontWeight(.semibold)
-                        Text("Joined 2022")
-                            .fontWeight(.light)
-                    }
+                UserProfile
+        }
+    }
+    
+    
+    private var UserProfile: some View {
+        ZStack {
+            Rectangle()
+                .frame(width: .infinity, height: 100)
+                .foregroundColor(Color.gray)
+                .opacity(0.1)
+            HStack {
+                Circle()
+                    .frame(width: 100, height: 100, alignment: .leading)
+                    .foregroundColor(.gray)
+                    .opacity(0.5)
+                    .padding(.leading, 15)
+                    .padding(.trailing, 10)
+                VStack {
+                    Text("Username")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                    Text("Joined 2022")
+                        .fontWeight(.light)
                 }
-                .padding()
+                Spacer()
             }
         }
     }
