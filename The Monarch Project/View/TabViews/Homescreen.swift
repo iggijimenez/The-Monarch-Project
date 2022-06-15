@@ -9,10 +9,9 @@ import SwiftUI
 
 struct Homescreen: View {
     
+    @State var isAddPresented = false
     @StateObject var model = EventModel()
     
-    @State var name = ""
-    @State var like = ""
     
     var body: some View {
         
@@ -38,7 +37,17 @@ struct Homescreen: View {
                 }
                 
             }
-            .navigationTitle("FEED")
+            .navigationBarTitle("Feed")
+            .navigationBarItems(trailing: Button(action: {
+                self.isAddPresented = true
+            }) {
+                Image(systemName: "person.crop.circle.fill")
+                    .foregroundColor(Color.orange)
+            })
+            .sheet(isPresented: $isAddPresented,
+                   onDismiss: { self.isAddPresented = false }) {
+                UserProfileView()
+            }
         }
         .onAppear {
             model.getData()
