@@ -39,12 +39,13 @@ struct Homescreen: View {
             }
             .navigationBarTitle("Feed")
             .navigationBarItems(trailing: Button(action: {
-                self.isAddPresented = true
+//                self.isAddPresented = true
+                isAddPresented.toggle()
             }) {
                 Image(systemName: "person.crop.circle.fill")
                     .foregroundColor(Color.orange)
             })
-            .sheet(isPresented: $isAddPresented,
+            .fullScreenCover(isPresented: $isAddPresented,
                    onDismiss: { self.isAddPresented = false }) {
                 UserProfileView()
             }
