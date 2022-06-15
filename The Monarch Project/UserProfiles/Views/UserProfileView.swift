@@ -40,6 +40,12 @@ struct UserProfileView: View {
                     }.padding()
                 }.padding()
             } //HStack
+            
+            Text("Button")
+                .foregroundColor(Color.white)
+                .padding(10)
+                .background(Color.blue)
+                .cornerRadius(15)
         }
     }
 }
