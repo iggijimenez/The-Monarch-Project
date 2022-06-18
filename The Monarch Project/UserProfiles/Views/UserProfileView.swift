@@ -32,14 +32,18 @@ struct UserProfileView: View {
     }
     
     private var ProfileInfo: some View {
+        //TODO: Make them go to the left side
         LazyVGrid(columns: columns) {
             Text("Name")
+            //TODO: Add to database
             TextField( "name", text: $name)
             
             Text("Username")
+            //TODO: Add to database
             TextField( "username", text: $username)
             
             Text("Pronouns")
+            //TODO: Add to database
             TextField( "pronouns", text: $pronouns)
         }
     }
