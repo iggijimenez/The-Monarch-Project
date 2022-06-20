@@ -43,12 +43,14 @@ struct UpcomingEventView: View {
                 
                 modelAttending
                 
+                //TODO: Create a button that shows the people who are attending
                 joinButton
                 
                 Spacer()
                 
             }
             
+            //TODO: Make it so we get the data from the db
             mapEvent
             
         }
