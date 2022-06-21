@@ -9,6 +9,7 @@ import SwiftUI
 import MapKit
 
 struct UpcomingEventView: View {
+    // commenting for the git
     
     @State private var settingname = ""
     @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 38.440740, longitude: -122.684596) , span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
