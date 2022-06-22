@@ -51,7 +51,7 @@ struct UpcomingEventView: View {
                 
             }
             
-            //TODO: Make it so we get the data from the db
+            //TODO: Find a solution for the map to display the location
             mapEvent
             
         }
@@ -65,6 +65,7 @@ struct UpcomingEventView: View {
         HStack {
             VStack(alignment: .leading) {
                 
+                //TODO: Connect to a firebase image
                 Image("dreamer_mural") //event.image
                     .resizable()
                     .scaledToFit()
