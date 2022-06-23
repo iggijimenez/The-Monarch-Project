@@ -9,10 +9,10 @@ import SwiftUI
 import MapKit
 
 struct UpcomingEventView: View {
-    // commenting for the git
     
     @State private var settingname = ""
     @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 38.440740, longitude: -122.684596) , span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+    @State var isAddPresented = false
     
     @StateObject var model: ViewModel
     
@@ -44,8 +44,10 @@ struct UpcomingEventView: View {
                 
                 modelAttending
                 
-                //TODO: Create a button that shows the people who are attending
-                joinButton
+                HStack {
+                    attendingButton
+                    joinButton
+                }
                 
                 Spacer()
                 
@@ -99,6 +101,31 @@ struct UpcomingEventView: View {
             .fontWeight(.black)
     }
     
+    
+    private var attendingButton: some View {
+        ZStack {
+            Button(action: {
+                isAddPresented.toggle()
+            }) {
+                HStack(spacing: 8) {
+                    Text("Attendees")
+                    Image(systemName: "rectangle.stack.person.crop")
+                        .imageScale(.large)
+                }
+                .padding(.horizontal, 16)
+                .padding(.vertical, 10)
+                .background(Color.orange)
+                .cornerRadius(15)
+            }//: BUTTON
+            .accentColor(Color.black)
+            .padding()
+            .fullScreenCover(isPresented: $isAddPresented,
+                   onDismiss: { self.isAddPresented = false }) {
+                AttendingUsersView()
+            }
+
+        }
+    }
     
     private var joinButton: some View {
         ZStack {
