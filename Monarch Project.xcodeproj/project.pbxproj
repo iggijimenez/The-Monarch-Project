@@ -39,6 +39,7 @@
 		A4D727D227164EAB00BCFA2A /* Event_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D727D127164EAB00BCFA2A /* Event_User.swift */; };
 		A4D9244F2829BD5B00AF1A05 /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D9244E2829BD5B00AF1A05 /* LocationsListView.swift */; };
 		A4E15DFA2717D00200BBE7F7 /* EventModelCoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E15DF92717D00200BBE7F7 /* EventModelCoded.swift */; };
+		A4F581EB2864F9C1001B7600 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F581EA2864F9C1001B7600 /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		A4D727D127164EAB00BCFA2A /* Event_User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event_User.swift; sourceTree = "<group>"; };
 		A4D9244E2829BD5B00AF1A05 /* LocationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListView.swift; sourceTree = "<group>"; };
 		A4E15DF92717D00200BBE7F7 /* EventModelCoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModelCoded.swift; sourceTree = "<group>"; };
+		A4F581EA2864F9C1001B7600 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,14 +165,14 @@
 			path = TabViews;
 			sourceTree = "<group>";
 		};
-		A46817D628570FE5005A67AB /* UserProfiles */ = {
+		A46817D628570FE5005A67AB /* UserProfile */ = {
 			isa = PBXGroup;
 			children = (
 				A46817D928571020005A67AB /* Models */,
 				A46817D828571016005A67AB /* ViewModels */,
 				A46817D728571002005A67AB /* Views */,
 			);
-			path = UserProfiles;
+			path = UserProfile;
 			sourceTree = "<group>";
 		};
 		A46817D728571002005A67AB /* Views */ = {
@@ -178,6 +180,7 @@
 			children = (
 				A46817DA28571041005A67AB /* UserView.swift */,
 				A46817DC28582081005A67AB /* UserProfileView.swift */,
+				A486562E2864201200017117 /* AttendingUsersView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 		A46817D828571016005A67AB /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A4F581EA2864F9C1001B7600 /* UserViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -217,7 +221,7 @@
 			children = (
 				A49E6A3C27160BCE002CC79C /* The_Monarch_ProjectApp.swift */,
 				A4049AEF282310240091B73C /* Map */,
-				A46817D628570FE5005A67AB /* UserProfiles */,
+				A46817D628570FE5005A67AB /* UserProfile */,
 				A4D727D32716550A00BCFA2A /* View */,
 				A4D727D52716553200BCFA2A /* Model */,
 				A4D727D42716551C00BCFA2A /* ViewModel */,
@@ -243,7 +247,6 @@
 				A44C17A72791BF91007573D5 /* NestedViews */,
 				A415BB8927179B000028D138 /* ModelViews */,
 				A44C17AC2791C02E007573D5 /* TabViews */,
-				A486562E2864201200017117 /* AttendingUsersView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				A46817DB28571041005A67AB /* UserView.swift in Sources */,
 				A4AFBDFD28375AC8007FC01C /* LocationDetailView.swift in Sources */,
 				A486562F2864201200017117 /* AttendingUsersView.swift in Sources */,
+				A4F581EB2864F9C1001B7600 /* UserViewModel.swift in Sources */,
 				A42ED2752719127E008D365B /* UpcomingEventsView.swift in Sources */,
 				A46817DD28582081005A67AB /* UserProfileView.swift in Sources */,
 				A42ED277271912C8008D365B /* UpcomingView.swift in Sources */,

@@ -133,7 +133,8 @@ struct UpcomingEventView: View {
                 if model.hasTheUserRSVPed {
                     model.deleteData(name: name, like: like) //if this this true
                 } else {
-                    model.addData(name: name, like: like) //if you click to go
+                    //This is a reference to ViewModel and adding data to the upcoming_event collection
+                    model.addData(name: name, like: like)
                 }
                 
             }) {

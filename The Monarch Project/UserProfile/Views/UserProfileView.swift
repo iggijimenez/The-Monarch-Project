@@ -8,10 +8,16 @@
 import SwiftUI
 
 struct UserProfileView: View {
+    
+//    @ObservableObject var model = ViewModel(event: Event)
+    
     @Environment(\.presentationMode) var presentationMode
+    
     @State private var name: String = ""
     @State private var username: String = ""
     @State private var pronouns: String = ""
+    
+    
     let columns = [GridItem(.fixed(200)),
                    GridItem(.flexible(maximum: 250))]
     
@@ -65,6 +71,7 @@ struct UserProfileView: View {
     private var AddButton: some View {
         Button("Add") {
             // TODO: upload the data to firebase
+//            model.addUserData(name: name)
             presentationMode.wrappedValue.dismiss()
         }
         .foregroundColor(Color.white)
