@@ -10,42 +10,42 @@ import Firebase
 
 class UserViewModel: ObservableObject {
     
-    init(event: Event){
-        self.event = event
-    }
+    @Published var list = [Username]()
     
-    var event: Event
-    @Published var list = [Event_User]()
-            
     func getData() {
         
         //get a reference to the database
         let db = Firestore.firestore()
         
         //Read the documents at a specific path
-        db.collection("usernames").document(event.id).getDocument { snapshot, error in
+        db.collection("usernames").getDocuments { snapshot, error in
             
             //checking for errors
             if error == nil {
-                
                 //no errors
+                
                 if let snapshot = snapshot {
                     
-                    //update the list property in the main thread
+                    // update
                     DispatchQueue.main.async {
-                        let eventDocument = snapshot
-                        guard let eventDictionary = eventDocument.data() else { return }
                         
-                        
+                        // Get all the documents and create usernames
+                        self.list = snapshot.documents.map { d in
+                            
+                            //Create a Username
+                            return Username(id: d.documentID, name: d["name"] as? String ?? "") //cast as a string and if not found return as a empty string
+                        }
                     }
-                    
                 }
+                
             } else {
                 //Handle the error
                 
             }
         }
     }
+    
+    
     
 }
 

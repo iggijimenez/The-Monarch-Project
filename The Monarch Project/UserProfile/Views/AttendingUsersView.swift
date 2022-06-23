@@ -9,18 +9,22 @@ import SwiftUI
 
 struct AttendingUsersView: View {
     
+    @ObservedObject var model = UserViewModel()
+    
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         VStack {
-            List{
-                Text("Iggi Jimenez")
-                Text("Edison Li")
-                Text("Jaylen Shleb")
+            List (model.list) { item in
+                Text(item.name)
             }
             
             DissmissButton
         }
+    }
+    
+    init() {
+        model.getData()
     }
     
     private var DissmissButton: some View {

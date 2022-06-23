@@ -40,6 +40,7 @@
 		A4D9244F2829BD5B00AF1A05 /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D9244E2829BD5B00AF1A05 /* LocationsListView.swift */; };
 		A4E15DFA2717D00200BBE7F7 /* EventModelCoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E15DF92717D00200BBE7F7 /* EventModelCoded.swift */; };
 		A4F581EB2864F9C1001B7600 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F581EA2864F9C1001B7600 /* UserViewModel.swift */; };
+		A4F581ED2864FEAA001B7600 /* Username.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F581EC2864FEAA001B7600 /* Username.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		A4D9244E2829BD5B00AF1A05 /* LocationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListView.swift; sourceTree = "<group>"; };
 		A4E15DF92717D00200BBE7F7 /* EventModelCoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModelCoded.swift; sourceTree = "<group>"; };
 		A4F581EA2864F9C1001B7600 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		A4F581EC2864FEAA001B7600 /* Username.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Username.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 		A46817D928571020005A67AB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A4F581EC2864FEAA001B7600 /* Username.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				A4D727D227164EAB00BCFA2A /* Event_User.swift in Sources */,
 				A415BB7C271789EF0028D138 /* Homescreen.swift in Sources */,
 				A42ED279271919B7008D365B /* EventBanner.swift in Sources */,
+				A4F581ED2864FEAA001B7600 /* Username.swift in Sources */,
 				A4E15DFA2717D00200BBE7F7 /* EventModelCoded.swift in Sources */,
 				A40F8B3D28360F40004A1A73 /* LocationPreviewView.swift in Sources */,
 				A4049AF92823148B0091B73C /* LocationsViewModel.swift in Sources */,
