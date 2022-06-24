@@ -12,6 +12,30 @@ class UserViewModel: ObservableObject {
     
     @Published var list = [Username]()
     
+    
+    func addData(name: String) {
+        
+        //get a reference to the database
+        let db = Firestore.firestore()
+        
+        //Read the documents at a specific path
+        db.collection("usernames").addDocument(data: ["name": name]) { error in
+            
+            
+            if error == nil {
+                // No errors
+                
+                //call the data to retriece latest data
+                self.getData()
+                
+            } else {
+                // Handle the error
+            }
+        }
+        
+    }
+    
+    
     func getData() {
         
         //get a reference to the database
@@ -25,7 +49,6 @@ class UserViewModel: ObservableObject {
                 //no errors
                 
                 if let snapshot = snapshot {
-                    
                     // update
                     DispatchQueue.main.async {
                         
@@ -37,13 +60,14 @@ class UserViewModel: ObservableObject {
                         }
                     }
                 }
-                
             } else {
                 //Handle the error
                 
             }
         }
     }
+    
+
     
     
     

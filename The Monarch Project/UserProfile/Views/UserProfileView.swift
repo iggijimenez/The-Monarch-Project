@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UserProfileView: View {
     
-//    @ObservableObject var model = ViewModel(event: Event)
+    @ObservedObject var model = UserViewModel()
     
     @Environment(\.presentationMode) var presentationMode
     
@@ -41,15 +41,12 @@ struct UserProfileView: View {
         //TODO: Make them go to the left side
         LazyVGrid(columns: columns) {
             Text("Name")
-            //TODO: Add to database
             TextField( "name", text: $name)
             
             Text("Username")
-            //TODO: Add to database
             TextField( "username", text: $username)
             
             Text("Pronouns")
-            //TODO: Add to database
             TextField( "pronouns", text: $pronouns)
         }
     }
@@ -70,8 +67,12 @@ struct UserProfileView: View {
     
     private var AddButton: some View {
         Button("Add") {
-            // TODO: upload the data to firebase
-//            model.addUserData(name: name)
+            
+            // Calling add data
+            model.addData(name: name)
+            
+            //TODO: Keep displaying the name
+            
             presentationMode.wrappedValue.dismiss()
         }
         .foregroundColor(Color.white)
