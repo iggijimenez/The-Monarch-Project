@@ -71,7 +71,7 @@ struct UserProfileView: View {
         Button("Add") {
             
             // Calling add data
-            model.addData(name: name, attending: attending)
+//            model.addData(name: name, attending: attending)
             
             //USERDEFAULTS: might delete
             UserDefaults.standard.set(name, forKey: "UDName")

@@ -15,6 +15,9 @@ struct UpcomingEventView: View {
     @State var isAddPresented = false
     
     @StateObject var model: ViewModel
+
+    @ObservedObject var umodel = UserViewModel()
+    
     
     init(event: Event){
         self.event = event
@@ -23,7 +26,8 @@ struct UpcomingEventView: View {
     
     var event: Event
     
-    var name = ""
+    @State private var name: String = (UserDefaults.standard.string(forKey: "UDName") ?? "")
+    @State private var attending: Int = 0
     var like = ""
     var image = ""
     var going = ""
@@ -135,6 +139,9 @@ struct UpcomingEventView: View {
                 } else {
                     //This is a reference to ViewModel and adding data to the upcoming_event collection
                     model.addData(name: name, like: like)
+                    
+                    //Only add if they havent been added already
+                    umodel.addData(name: name, attending: attending)
                 }
                 
             }) {
