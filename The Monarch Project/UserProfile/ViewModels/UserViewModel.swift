@@ -13,13 +13,13 @@ class UserViewModel: ObservableObject {
     @Published var list = [Username]()
     
     
-    func addData(name: String) {
+    func addData(name: String, attending: Int) {
         
         //get a reference to the database
         let db = Firestore.firestore()
         
         //Read the documents at a specific path
-        db.collection("usernames").addDocument(data: ["name": name]) { error in
+        db.collection("usernames").addDocument(data: ["name": name, "attending": attending]) { error in
             
             
             if error == nil {
@@ -56,7 +56,8 @@ class UserViewModel: ObservableObject {
                         self.list = snapshot.documents.map { d in
                             
                             //Create a Username
-                            return Username(id: d.documentID, name: d["name"] as? String ?? "") //cast as a string and if not found return as a empty string
+                            return Username(id: d.documentID, name: d["name"] as? String ?? "",
+                                            attending: d["attending"] as? Int ?? 0) //cast as a string and if not found return as a empty string
                         }
                     }
                 }
@@ -67,7 +68,7 @@ class UserViewModel: ObservableObject {
         }
     }
     
-
+    
     
     
     

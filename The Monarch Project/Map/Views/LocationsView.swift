@@ -26,21 +26,25 @@ struct LocationsView: View {
                     VStack {
                         Spacer()
                         //MARK: Testing the bottom white bar
-//                        Rectangle()
-//                            .foregroundColor(Color.white)
-//                            .frame(maxWidth: .infinity)
-//                            .frame(height: 80)
+                        //                        Rectangle()
+                        //                            .foregroundColor(Color.white)
+                        //                            .frame(maxWidth: .infinity)
+                        //                            .frame(height: 80)
                     }
-//                    .ignoresSafeArea()
+                    
+                    
                     
                     locationsPreviewStack
                     
+                        }
+                        .ignoresSafeArea()
+                    
                 }
-                .ignoresSafeArea()
+            .sheet(item: $vm.sheetLocation, onDismiss: nil) { location in
+                LocationDetailView(location: location)
+                
             }
-        }
-        .sheet(item: $vm.sheetLocation, onDismiss: nil) { location in
-            LocationDetailView(location: location)
+            
         }
     }
 }

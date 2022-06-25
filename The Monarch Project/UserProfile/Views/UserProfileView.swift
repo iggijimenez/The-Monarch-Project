@@ -13,7 +13,9 @@ struct UserProfileView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
-    @State private var name: String = ""
+//    @State private var name: String = ""
+    @State private var name: String = (UserDefaults.standard.string(forKey: "UDName") ?? "")
+    @State private var attending: Int = 0
     @State private var username: String = ""
     @State private var pronouns: String = ""
     
@@ -69,7 +71,10 @@ struct UserProfileView: View {
         Button("Add") {
             
             // Calling add data
-            model.addData(name: name)
+            model.addData(name: name, attending: attending)
+            
+            //USERDEFAULTS: might delete
+            UserDefaults.standard.set(name, forKey: "UDName")
             
             //TODO: Keep displaying the name
             

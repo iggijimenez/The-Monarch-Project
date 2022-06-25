@@ -8,7 +8,8 @@
 import Foundation
 
 struct Username: Identifiable {
-  
-  var id: String
-  var name: String
+    
+    var id: String
+    var name: String
+    var attending: Int
 }
