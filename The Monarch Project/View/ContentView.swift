@@ -4,12 +4,13 @@
 //
 //  Created by Jimenez on 10/12/21.
 //
-
+import Foundation
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var vm = LocationsViewModel()
     
-    @StateObject private var vm = LocationsViewModel() 
+//    UserDefaults.standard.set(name, forKey: "UDName")
     
     var body: some View {
         TabView {

@@ -73,7 +73,6 @@ struct UserProfileView: View {
             // Calling add data
 //            model.addData(name: name, attending: attending)
             
-            //USERDEFAULTS: might delete
             UserDefaults.standard.set(name, forKey: "UDName")
             
             //TODO: Keep displaying the name
