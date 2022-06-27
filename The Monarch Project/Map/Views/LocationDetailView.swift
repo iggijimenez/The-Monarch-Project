@@ -30,8 +30,9 @@ struct LocationDetailView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()
             }
+            .ignoresSafeArea()
         }
-        .ignoresSafeArea()
+//        .ignoresSafeArea()
         .background(.ultraThinMaterial)
         .overlay(backButton, alignment: .topLeading)
     }
