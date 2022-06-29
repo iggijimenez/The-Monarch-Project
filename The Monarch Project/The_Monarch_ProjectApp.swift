@@ -12,9 +12,11 @@ import Firebase
 struct The_Monarch_ProjectApp: App {
     
     @StateObject private var vm = LocationsViewModel()
+
     
     init() {
         FirebaseApp.configure()
+        
     }
     
     var body: some Scene {

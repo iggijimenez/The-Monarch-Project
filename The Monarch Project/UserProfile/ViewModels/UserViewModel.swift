@@ -35,7 +35,6 @@ class UserViewModel: ObservableObject {
         
     }
     
-    
     func getData() {
         
         //get a reference to the database
