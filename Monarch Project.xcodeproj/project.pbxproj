@@ -25,6 +25,8 @@
 		A44BA69B271A233700B8046B /* UpcomingEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44BA69A271A233600B8046B /* UpcomingEvent.swift */; };
 		A46817DB28571041005A67AB /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46817DA28571041005A67AB /* UserView.swift */; };
 		A46817DD28582081005A67AB /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46817DC28582081005A67AB /* UserProfileView.swift */; };
+		A47E354C286CEB4800D606F6 /* RSVPs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47E354B286CEB4800D606F6 /* RSVPs.swift */; };
+		A47E354E286CF4AD00D606F6 /* TUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47E354D286CF4AD00D606F6 /* TUserViewModel.swift */; };
 		A486562F2864201200017117 /* AttendingUsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A486562E2864201200017117 /* AttendingUsersView.swift */; };
 		A49E6A3D27160BCE002CC79C /* The_Monarch_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E6A3C27160BCE002CC79C /* The_Monarch_ProjectApp.swift */; };
 		A49E6A3F27160BCE002CC79C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E6A3E27160BCE002CC79C /* ContentView.swift */; };
@@ -62,6 +64,8 @@
 		A44BA69A271A233600B8046B /* UpcomingEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingEvent.swift; sourceTree = "<group>"; };
 		A46817DA28571041005A67AB /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		A46817DC28582081005A67AB /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		A47E354B286CEB4800D606F6 /* RSVPs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSVPs.swift; sourceTree = "<group>"; };
+		A47E354D286CF4AD00D606F6 /* TUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUserViewModel.swift; sourceTree = "<group>"; };
 		A486562E2864201200017117 /* AttendingUsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendingUsersView.swift; sourceTree = "<group>"; };
 		A49E6A3927160BCE002CC79C /* Monarch Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Monarch Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A49E6A3C27160BCE002CC79C /* The_Monarch_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Monarch_ProjectApp.swift; sourceTree = "<group>"; };
@@ -191,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				A4F581EA2864F9C1001B7600 /* UserViewModel.swift */,
+				A47E354D286CF4AD00D606F6 /* TUserViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 				A4E15DF92717D00200BBE7F7 /* EventModelCoded.swift */,
 				A44BA6982719453300B8046B /* Event.swift */,
 				A44BA69A271A233600B8046B /* UpcomingEvent.swift */,
+				A47E354B286CEB4800D606F6 /* RSVPs.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -363,6 +369,7 @@
 				A46817DD28582081005A67AB /* UserProfileView.swift in Sources */,
 				A42ED277271912C8008D365B /* UpcomingView.swift in Sources */,
 				A4AFBDFB28374D68007FC01C /* LocationMapAnnotationView.swift in Sources */,
+				A47E354C286CEB4800D606F6 /* RSVPs.swift in Sources */,
 				A415BB86271795E90028D138 /* EventModel.swift in Sources */,
 				A4049AEE28230F080091B73C /* Location.swift in Sources */,
 				A44BA69B271A233700B8046B /* UpcomingEvent.swift in Sources */,
@@ -377,6 +384,7 @@
 				A4D9244F2829BD5B00AF1A05 /* LocationsListView.swift in Sources */,
 				A4D727D227164EAB00BCFA2A /* Event_User.swift in Sources */,
 				A415BB7C271789EF0028D138 /* Homescreen.swift in Sources */,
+				A47E354E286CF4AD00D606F6 /* TUserViewModel.swift in Sources */,
 				A42ED279271919B7008D365B /* EventBanner.swift in Sources */,
 				A4F581ED2864FEAA001B7600 /* Username.swift in Sources */,
 				A4E15DFA2717D00200BBE7F7 /* EventModelCoded.swift in Sources */,

@@ -44,6 +44,8 @@ struct UpcomingEventView: View {
                 
                 eventDesc
                 
+                Text(event.id)
+                
                 Spacer()
                 
                 modelAttending
