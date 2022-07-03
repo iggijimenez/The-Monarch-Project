@@ -21,7 +21,7 @@ struct AttendingUsersView: View {
             if showDuck {
                 List (model.list) { item in
                     Text(item.name)
-                    Text(item.id)
+//                    Text(item.id)
                 }
             } else {
                 Text("🐘")
