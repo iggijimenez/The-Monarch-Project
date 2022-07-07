@@ -5,6 +5,10 @@
 //  Created by jimenez on 6/23/22.
 //
 
+/*
+ This is the UserViewModel where we CRUD the users information(name, userID) to 'usernames' collection.
+ */
+
 import Foundation
 import Firebase
 
@@ -13,13 +17,13 @@ class UserViewModel: ObservableObject {
     @Published var list = [Username]()
     
     
-    func addData(name: String, attending: Int) {
+    func addData(name: String, userID: Int) {
         
         //get a reference to the database
         let db = Firestore.firestore()
         
         //Read the documents at a specific path
-        db.collection("usernames").addDocument(data: ["name": name, "attending": attending]) { error in
+        db.collection("usernames").addDocument(data: ["name": name, "userID": userID]) { error in
             
             
             if error == nil {
@@ -56,7 +60,7 @@ class UserViewModel: ObservableObject {
                             
                             //Create a Username
                             return Username(id: d.documentID, name: d["name"] as? String ?? "",
-                                            attending: d["attending"] as? Int ?? 0) //cast as a string and if not found return as a empty string
+                                            userID: d["userID"] as? Int ?? 0) //cast as a string and if not found return as a empty string
                         }
                     }
                 }

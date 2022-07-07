@@ -27,7 +27,7 @@ struct UpcomingEventView: View {
     var event: Event
     
     @State private var name: String = (UserDefaults.standard.string(forKey: "UDName") ?? "")
-    @State private var attending: Int = 0
+    @State private var userID: Int = 0
     var like = ""
     var image = ""
     var going = ""
@@ -143,7 +143,7 @@ struct UpcomingEventView: View {
                     model.addData(name: name, like: like)
                     
                     //Only add if they havent been added already
-                    umodel.addData(name: name, attending: attending)
+                    umodel.addData(name: name, userID: userID)
                 }
                 
             }) {

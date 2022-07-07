@@ -11,5 +11,5 @@ struct Username: Identifiable {
     
     var id: String
     var name: String
-    var attending: Int
+    var userID: Int
 }

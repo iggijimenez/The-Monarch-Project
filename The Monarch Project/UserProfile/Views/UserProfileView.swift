@@ -15,7 +15,7 @@ struct UserProfileView: View {
     
 //    @State private var name: String = ""
     @State private var name: String = (UserDefaults.standard.string(forKey: "UDName") ?? "")
-    @State private var attending: Int = 0
+    @State private var userID: Int = 21
     @State private var username: String = ""
     @State private var pronouns: String = ""
     
@@ -70,12 +70,15 @@ struct UserProfileView: View {
     private var AddButton: some View {
         Button("Add") {
             
-            // Calling add data
-//            model.addData(name: name, attending: attending)
-            
+            //Save to local storage
             UserDefaults.standard.set(name, forKey: "UDName")
             
-            //TODO: Keep displaying the name
+            //Save to the 'username' collection
+            List (model.list) { item in
+                Text(item.name)
+            }
+            
+            model.addData(name: name, userID: userID)
             
             presentationMode.wrappedValue.dismiss()
         }
