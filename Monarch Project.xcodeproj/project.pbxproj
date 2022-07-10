@@ -145,26 +145,6 @@
 			path = DataServices;
 			sourceTree = "<group>";
 		};
-		A415BB8927179B000028D138 /* ModelViews */ = {
-			isa = PBXGroup;
-			children = (
-				A42ED276271912C8008D365B /* UpcomingView.swift */,
-				A415BB8A27179B290028D138 /* EventPostView.swift */,
-				A42ED278271919B6008D365B /* EventBanner.swift */,
-				A4DB2CE728779BD700B5317F /* backendOnBoarding.swift */,
-			);
-			path = ModelViews;
-			sourceTree = "<group>";
-		};
-		A44C17A72791BF91007573D5 /* NestedViews */ = {
-			isa = PBXGroup;
-			children = (
-				A4C6E1232718B4480096344E /* EventDetailView.swift */,
-				A42ED2742719127D008D365B /* UpcomingEventsView.swift */,
-			);
-			path = NestedViews;
-			sourceTree = "<group>";
-		};
 		A44C17AC2791C02E007573D5 /* TabViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,11 +211,10 @@
 			isa = PBXGroup;
 			children = (
 				A49E6A3C27160BCE002CC79C /* The_Monarch_ProjectApp.swift */,
+				A49E6A3E27160BCE002CC79C /* ContentView.swift */,
 				A4049AEF282310240091B73C /* Map */,
 				A46817D628570FE5005A67AB /* UserProfile */,
-				A4D727D32716550A00BCFA2A /* View */,
-				A4D727D52716553200BCFA2A /* Model */,
-				A4D727D42716551C00BCFA2A /* ViewModel */,
+				A4DB2CE9287A5BF300B5317F /* Main */,
 				A49E6A4A27160D54002CC79C /* GoogleService-Info.plist */,
 				A4049AE8282222400091B73C /* Assets.xcassets */,
 				A49E6A4227160BD4002CC79C /* Preview Content */,
@@ -254,9 +233,12 @@
 		A4D727D32716550A00BCFA2A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A49E6A3E27160BCE002CC79C /* ContentView.swift */,
-				A44C17A72791BF91007573D5 /* NestedViews */,
-				A415BB8927179B000028D138 /* ModelViews */,
+				A4C6E1232718B4480096344E /* EventDetailView.swift */,
+				A42ED2742719127D008D365B /* UpcomingEventsView.swift */,
+				A42ED276271912C8008D365B /* UpcomingView.swift */,
+				A415BB8A27179B290028D138 /* EventPostView.swift */,
+				A42ED278271919B6008D365B /* EventBanner.swift */,
+				A4DB2CE728779BD700B5317F /* backendOnBoarding.swift */,
 				A44C17AC2791C02E007573D5 /* TabViews */,
 			);
 			path = View;
@@ -282,6 +264,16 @@
 				A47E354B286CEB4800D606F6 /* RSVPs.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A4DB2CE9287A5BF300B5317F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A4D727D42716551C00BCFA2A /* ViewModel */,
+				A4D727D52716553200BCFA2A /* Model */,
+				A4D727D32716550A00BCFA2A /* View */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
