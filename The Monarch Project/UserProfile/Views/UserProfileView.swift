@@ -74,10 +74,6 @@ struct UserProfileView: View {
             UserDefaults.standard.set(name, forKey: "UDName")
             
             //Save to the 'username' collection
-            List (model.list) { item in
-                Text(item.name)
-            }
-            
             model.addData(name: name, userID: userID)
             
             presentationMode.wrappedValue.dismiss()

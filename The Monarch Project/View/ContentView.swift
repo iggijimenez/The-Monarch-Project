@@ -8,6 +8,7 @@ import Foundation
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("showOnboarding") var showOnboarding: Bool = true
     @StateObject private var vm = LocationsViewModel()
     
 //    UserDefaults.standard.set(name, forKey: "UDName")
@@ -27,6 +28,9 @@ struct ContentView: View {
                 }
         }
         .accentColor(.red)
+//        .onAppear {
+//            creatingRandomNumber(number: 10)
+//        }
     }
     
 }
