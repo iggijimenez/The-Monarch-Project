@@ -17,7 +17,7 @@ class UserViewModel: ObservableObject {
     @Published var list = [Username]()
     
     
-    func addData(name: String, userID: Int) {
+    func addData(name: String, userID: String) {
         
         //get a reference to the database
         let db = Firestore.firestore()
@@ -60,7 +60,7 @@ class UserViewModel: ObservableObject {
                             
                             //Create a Username
                             return Username(id: d.documentID, name: d["name"] as? String ?? "",
-                                            userID: d["userID"] as? Int ?? 0) //cast as a string and if not found return as a empty string
+                                            userID: d["userID"] as? String ?? "") //cast as a string and if not found return as a empty string d["userID"]
                         }
                     }
                 }

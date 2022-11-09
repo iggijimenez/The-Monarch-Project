@@ -143,7 +143,7 @@ struct UpcomingEventView: View {
                     model.addData(name: name, like: like)
                     
                     //Only add if they havent been added already
-                    umodel.addData(name: name, userID: userID)
+//                    umodel.addData(name: name, userID: userID)
                 }
                 
             }) {

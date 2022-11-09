@@ -15,7 +15,7 @@ struct UserProfileView: View {
     
 //    @State private var name: String = ""
     @State private var name: String = (UserDefaults.standard.string(forKey: "UDName") ?? "")
-    @State private var userID: Int = 21
+    @State private var userID: String = (UserDefaults.standard.string(forKey: "value") ?? "")
     @State private var username: String = ""
     @State private var pronouns: String = ""
     
@@ -70,7 +70,7 @@ struct UserProfileView: View {
     private var AddButton: some View {
         Button("Add") {
             
-            //Save to local storage
+            //Save name to local storage
             UserDefaults.standard.set(name, forKey: "UDName")
             
             //Save to the 'username' collection
