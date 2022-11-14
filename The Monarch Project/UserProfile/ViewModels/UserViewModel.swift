@@ -22,22 +22,22 @@ class UserViewModel: ObservableObject {
         //get a reference to the database
         let db = Firestore.firestore()
         
-        //Read the documents at a specific path
-        db.collection("usernames").addDocument(data: ["name": name, "userID": userID]) { error in
-            
-            
-            if error == nil {
-                // No errors
-                
-                //call the data to retriece latest data
-                self.getData()
-                
-            } else {
-                // Handle the error
-            }
-        }
         
+        // Add a new document in collection "username"
+        db.collection("usernames").document(UserDefaults.standard.object(forKey: "value") as! String).setData([
+                // MARK: Change the parameters to the users inputed choices
+                "name": "Los Angelesss",
+                "state": "CA",
+                "country": "USA"
+            ]) { err in
+                if let err = err {
+                    print("Error writing document: \(err)")
+                } else {
+                    print("Document successfully written!")
+                }
+            }
     }
+    
     
     func getData() {
         
