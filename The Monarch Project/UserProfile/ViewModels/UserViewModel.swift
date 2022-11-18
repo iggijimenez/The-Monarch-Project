@@ -17,7 +17,7 @@ class UserViewModel: ObservableObject {
     @Published var list = [Username]()
     
     
-    func addData(name: String, userID: String) {
+    func addData(name: String, UE: Bool) {
         
         //get a reference to the database
         let db = Firestore.firestore()
@@ -26,9 +26,8 @@ class UserViewModel: ObservableObject {
         // Add a new document in collection "username"
         db.collection("usernames").document(UserDefaults.standard.object(forKey: "value") as! String).setData([
                 // MARK: Change the parameters to the users inputed choices
-                "name": "Los Angelesss",
-                "state": "CA",
-                "country": "USA"
+                "name": name,
+                "UE": UE
             ]) { err in
                 if let err = err {
                     print("Error writing document: \(err)")
@@ -59,8 +58,7 @@ class UserViewModel: ObservableObject {
                         self.list = snapshot.documents.map { d in
                             
                             //Create a Username
-                            return Username(id: d.documentID, name: d["name"] as? String ?? "",
-                                            userID: d["userID"] as? String ?? "") //cast as a string and if not found return as a empty string d["userID"]
+                            return Username(id: d.documentID, name: d["name"] as? String ?? "", UE: (d["UE"] != nil)) //cast as a string and if not found return as a empty string 
                         }
                     }
                 }

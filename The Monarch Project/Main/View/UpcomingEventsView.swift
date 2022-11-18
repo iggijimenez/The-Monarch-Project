@@ -15,7 +15,8 @@ struct UpcomingEventView: View {
     @State var isAddPresented = false
     
     @StateObject var model: ViewModel
-
+    //    @StateObject var umodel: UserViewModel
+    
     @ObservedObject var umodel = UserViewModel()
     
     
@@ -27,7 +28,6 @@ struct UpcomingEventView: View {
     var event: Event
     
     @State private var name: String = (UserDefaults.standard.string(forKey: "UDName") ?? "")
-    @State private var userID: Int = 0
     var like = ""
     var image = ""
     var going = ""
@@ -126,10 +126,10 @@ struct UpcomingEventView: View {
             .accentColor(Color.black)
             .padding()
             .fullScreenCover(isPresented: $isAddPresented,
-                   onDismiss: { self.isAddPresented = false }) {
+                             onDismiss: { self.isAddPresented = false }) {
                 AttendingUsersView()
             }
-
+            
         }
     }
     
@@ -138,12 +138,13 @@ struct UpcomingEventView: View {
             Button(action: {
                 if model.hasTheUserRSVPed {
                     model.deleteData(name: name, like: like) //if this this true
+                    umodel.addData(name: name, UE: false)
                 } else {
                     //This is a reference to ViewModel and adding data to the upcoming_event collection
                     model.addData(name: name, like: like)
+                    umodel.addData(name: name, UE: true)
                     
                     //Only add if they havent been added already
-//                    umodel.addData(name: name, userID: userID)
                 }
                 
             }) {

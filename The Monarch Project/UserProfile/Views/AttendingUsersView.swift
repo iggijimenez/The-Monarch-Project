@@ -10,24 +10,21 @@ import SwiftUI
 struct AttendingUsersView: View {
     
     @ObservedObject var model = UserViewModel()
-    @ObservedObject var tmodel = TUserViewModel()
-    
-    @State  var showDuck: Bool = true
+//    @ObservedObject var tmodel = TUserViewModel()
     
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         VStack {
-            if showDuck {
-                List (model.list) { item in
+            List (model.list) { item in
+                if item.UE == false {
+//                    Text(item.UE)
                     Text(item.name)
-//                    Text(item.id)
+                } else {
+                    Text("THis isnt working")
                 }
-            } else {
-                Text("🐘")
             }
-            
-            
+
             
             DissmissButton
         }
@@ -35,7 +32,7 @@ struct AttendingUsersView: View {
     
     init() {
         model.getData()
-        tmodel.getData()
+//        tmodel.getData()
     }
     
     private var DissmissButton: some View {
