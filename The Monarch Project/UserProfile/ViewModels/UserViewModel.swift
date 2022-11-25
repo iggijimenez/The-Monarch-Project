@@ -6,7 +6,7 @@
 //
 
 /*
- This is the UserViewModel where we CRUD the users information(name, userID) to 'usernames' collection.
+ This is the UserViewModel where we CRUD the users information(name, ue) to 'usernames' collection.
  */
 
 import Foundation
@@ -17,7 +17,7 @@ class UserViewModel: ObservableObject {
     @Published var list = [Username]()
     
     
-    func addData(name: String, UE: Bool) {
+    func addData(name: String, ue: Bool) {
         
         //get a reference to the database
         let db = Firestore.firestore()
@@ -27,7 +27,7 @@ class UserViewModel: ObservableObject {
         db.collection("usernames").document(UserDefaults.standard.object(forKey: "value") as! String).setData([
                 // MARK: Change the parameters to the users inputed choices
                 "name": name,
-                "UE": UE
+                "ue": ue
             ]) { err in
                 if let err = err {
                     print("Error writing document: \(err)")
@@ -58,7 +58,7 @@ class UserViewModel: ObservableObject {
                         self.list = snapshot.documents.map { d in
                             
                             //Create a Username
-                            return Username(id: d.documentID, name: d["name"] as? String ?? "", UE: (d["UE"] != nil)) //cast as a string and if not found return as a empty string 
+                            return Username(id: d.documentID, name: d["name"] as? String ?? "", ue: ((d["ue"]) != nil)) //cast as a string and if not found return as a empty string
                         }
                     }
                 }

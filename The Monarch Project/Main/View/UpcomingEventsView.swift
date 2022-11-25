@@ -28,6 +28,9 @@ struct UpcomingEventView: View {
     var event: Event
     
     @State private var name: String = (UserDefaults.standard.string(forKey: "UDName") ?? "")
+    let ue = UserDefaults.standard.bool(forKey: "ue") 
+//    @State private var ue: Bool = UserDefaults.standard.set(true, forKey: "ue")
+//    @State private var ue: Bool = ((UserDefaults.standard.string(forKey: "ue")) ?? false)
     var like = ""
     var image = ""
     var going = ""
@@ -138,11 +141,11 @@ struct UpcomingEventView: View {
             Button(action: {
                 if model.hasTheUserRSVPed {
                     model.deleteData(name: name, like: like) //if this this true
-                    umodel.addData(name: name, UE: false)
+                    umodel.addData(name: name, ue: ue)
                 } else {
                     //This is a reference to ViewModel and adding data to the upcoming_event collection
                     model.addData(name: name, like: like)
-                    umodel.addData(name: name, UE: true)
+                    umodel.addData(name: name, ue: ue)
                     
                     //Only add if they havent been added already
                 }

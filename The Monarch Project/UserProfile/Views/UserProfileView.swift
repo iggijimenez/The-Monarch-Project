@@ -15,6 +15,7 @@ struct UserProfileView: View {
     
 //    @State private var name: String = ""
     @State private var name: String = (UserDefaults.standard.string(forKey: "UDName") ?? "")
+    @State private var ue: Bool = ((UserDefaults.standard.string(forKey: "ue")) != nil)
 //    @State private var userID: String = (UserDefaults.standard.string(forKey: "value") ?? "")
     @State private var username: String = ""
     @State private var pronouns: String = ""
@@ -74,7 +75,7 @@ struct UserProfileView: View {
             UserDefaults.standard.set(name, forKey: "UDName")
             
             //Save to the 'username' collection
-            model.addData(name: name, UE: false)
+            model.addData(name: name, ue: ue)
             
             presentationMode.wrappedValue.dismiss()
         }

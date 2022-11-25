@@ -11,6 +11,6 @@ struct Username: Identifiable {
     
     var id: String
     var name: String
-    var UE: Bool
+    var ue: Bool
     
 }

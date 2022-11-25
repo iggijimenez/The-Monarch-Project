@@ -10,18 +10,16 @@ import SwiftUI
 struct AttendingUsersView: View {
     
     @ObservedObject var model = UserViewModel()
-//    @ObservedObject var tmodel = TUserViewModel()
     
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         VStack {
             List (model.list) { item in
-                if item.UE == false {
-//                    Text(item.UE)
+                if item.ue == false { // This just checks if there is a vaule in the database
                     Text(item.name)
                 } else {
-                    Text("THis isnt working")
+                    // Dont display anything.
                 }
             }
 
@@ -32,7 +30,6 @@ struct AttendingUsersView: View {
     
     init() {
         model.getData()
-//        tmodel.getData()
     }
     
     private var DissmissButton: some View {
